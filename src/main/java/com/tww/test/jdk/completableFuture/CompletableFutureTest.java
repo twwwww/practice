@@ -11,6 +11,8 @@ public class CompletableFutureTest {
         test1();
     }
 
+    // thenCompose flatmap
+    // thenApplay map
     private static void test1() {
         List<Integer> ids = new ArrayList<>();
         ids.add(5);
@@ -19,7 +21,7 @@ public class CompletableFutureTest {
         ids.add(13);
         CompletableFuture<List<User>> future = CompletableFuture.completedFuture(ids).thenCompose(list -> {
             List<CompletableFuture<User>> userFutureList = list.stream().map(id -> {
-                CompletableFuture<String> nameFuture = CompletableFuture.supplyAsync(() -> getName(id));
+                CompletableFuture<String> nameFuture = getNameFuture(id);
                 CompletableFuture<Integer> stateFuture = CompletableFuture.supplyAsync(() -> getState(id));
                 return nameFuture.thenCombineAsync(stateFuture, (name, state) -> {
                     User user = new User();
@@ -32,20 +34,30 @@ public class CompletableFutureTest {
             CompletableFuture<User>[] completableFuture =
                     userFutureList.toArray(new CompletableFuture[userFutureList.size()]);
             CompletableFuture<Void> allDone = CompletableFuture.allOf(completableFuture);
+            System.out.println("wait allDone");
+            if (false) {
+                throw new RuntimeException("dsdf");
+            }
             return allDone.thenApply(
                     all -> userFutureList.stream().map(CompletableFuture::join).collect(Collectors.toList()));
+        }).exceptionally(th -> {
+            th.printStackTrace();
+            return new ArrayList<>();
         });
         List<User> users = future.join();
         System.out.println(users);
     }
 
-    private static String getName(Integer id) {
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return "name" + id;
+    private static CompletableFuture<String> getNameFuture(Integer id) {
+        return CompletableFuture.supplyAsync(() -> {
+            try {
+                TimeUnit.SECONDS.sleep(2);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            int i = 1 / 0;
+            return "name" + id;
+        });
     }
 
     private static Integer getState(Integer id) {
