@@ -1,27 +1,39 @@
 package com.tww.test.jdk.completableFuture;
 
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.DelayQueue;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 public class CompletableFutureTest {
+    static DelayQueue delayQueue = new DelayQueue();
     public static void main(String[] args) {
         test1();
     }
 
-    // thenCompose flatmap
-    // thenApplay map
+    /**
+     * thenCompose flatmap
+     * thenApply map
+     * 使用当前线程执行  Async 相对于当前线使用别的线程(ForkJoinPool)调用
+     **/
     private static void test1() {
-        List<Integer> ids = new ArrayList<>();
-        ids.add(5);
-        ids.add(8);
-        ids.add(10);
-        ids.add(13);
-        CompletableFuture<List<User>> future = CompletableFuture.completedFuture(ids).thenCompose(list -> {
+        List<Integer> ids = List.of(1,2,3,4,5,6,7,8,9,0);
+        CompletableFuture<List<User>> future = CompletableFuture.completedFuture(ids).thenComposeAsync(list -> {
+            System.out.println("sleep ====");
+            sleep(5);
             List<CompletableFuture<User>> userFutureList = list.stream().map(id -> {
-                CompletableFuture<String> nameFuture = getNameFuture(id);
+                CompletableFuture<String> nameFuture = getNameFuture(id).exceptionally(throwable -> {
+                    System.out.println("name throw Exception");
+                    return "error";
+                });
                 CompletableFuture<Integer> stateFuture = CompletableFuture.supplyAsync(() -> getState(id));
                 return nameFuture.thenCombineAsync(stateFuture, (name, state) -> {
                     User user = new User();
@@ -40,33 +52,51 @@ public class CompletableFutureTest {
             }
             return allDone.thenApply(
                     all -> userFutureList.stream().map(CompletableFuture::join).collect(Collectors.toList()));
-        }).exceptionally(th -> {
-            th.printStackTrace();
-            return new ArrayList<>();
+        }).handleAsync((users, throwable) -> {
+            if (Objects.nonNull(throwable)) {
+                throwable.printStackTrace();
+                return null;
+            } else {
+                return users;
+            }
         });
+        System.out.println("end======");
         List<User> users = future.join();
         System.out.println(users);
     }
 
+    private static void test3() {
+        List<Integer> ids = List.of(1,2,3,4,5,6,7,8,9,0);
+        Flux<Integer> flux = Flux.fromIterable(ids);
+        flux.map(id -> {
+            Mono<String> name = Mono.fromFuture(getNameFuture(id));
+            Mono<Integer> state = Mono.justOrEmpty(getState(id));
+            Flux.combineLatest(name,state,)
+
+        })
+    }
+
     private static CompletableFuture<String> getNameFuture(Integer id) {
         return CompletableFuture.supplyAsync(() -> {
-            try {
-                TimeUnit.SECONDS.sleep(2);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            System.out.println("name in :" + id + "  ,size:" + ForkJoinPool.commonPool().getPoolSize() + "====thread:" + Thread.currentThread());
+            sleep(5);
             int i = 1 / 0;
             return "name" + id;
-        });
+        }, Executors.newFixedThreadPool(10));
     }
 
     private static Integer getState(Integer id) {
+        System.out.println("******state in :" + id + "  ,size:" + ForkJoinPool.commonPool().getPoolSize() + "====thread:" + Thread.currentThread());
+        sleep(5);
+        return 0 - id;
+    }
+
+    private static void sleep(Integer time) {
         try {
-            TimeUnit.SECONDS.sleep(5);
+            delayQueue.poll(time,TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return 0 - id;
     }
 
 
