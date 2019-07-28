@@ -2,9 +2,10 @@ package com.tww.test.arithmetic.timing_wheel;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.Executor;
 
 /**
- *时刻
+ * 时刻
  */
 public class TimeScale {
     private List<Task> tasks;
@@ -15,8 +16,8 @@ public class TimeScale {
         tasks = new LinkedList<>();
     }
 
-    public void scheduleTask() {
-        tasks.forEach(Task::execute);
+    public void scheduleTask(Executor executor) {
+        tasks.forEach(task -> executor.execute(task::execute));
     }
 
     public void addTask(Task task) {
