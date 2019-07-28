@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 public class CompletableFutureTest {
     static DelayQueue delayQueue = new DelayQueue();
     public static void main(String[] args) {
-        test1();
+        test3();
     }
 
     /**
@@ -68,12 +68,21 @@ public class CompletableFutureTest {
     private static void test3() {
         List<Integer> ids = List.of(1,2,3,4,5,6,7,8,9,0);
         Flux<Integer> flux = Flux.fromIterable(ids);
-        flux.map(id -> {
+        Flux<User> userFlux = flux.flatMap(id -> {
             Mono<String> name = Mono.fromFuture(getNameFuture(id));
             Mono<Integer> state = Mono.justOrEmpty(getState(id));
-            Flux.combineLatest(name,state,)
-
-        })
+            Mono<User> userMono = name.zipWith(state, (na, st) -> {
+                User user = new User();
+                user.setId(id);
+                user.setName(na);
+                user.setState(st);
+                return user;
+            });
+            return userMono;
+        });
+        Mono<List<User>> results = userFlux.collectList();
+        List<User> users = results.block();
+        System.out.println(users);
     }
 
     private static CompletableFuture<String> getNameFuture(Integer id) {
