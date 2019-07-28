@@ -15,17 +15,16 @@ import java.util.stream.Collectors;
 
 public class CompletableFutureTest {
     static DelayQueue delayQueue = new DelayQueue();
+
     public static void main(String[] args) {
         test3();
     }
 
     /**
-     * thenCompose flatmap
-     * thenApply map
-     * 使用当前线程执行  Async 相对于当前线使用别的线程(ForkJoinPool)调用
+     * thenCompose flatmap thenApply map 使用当前线程执行 Async 相对于当前线使用别的线程(ForkJoinPool)调用
      **/
     private static void test1() {
-        List<Integer> ids = List.of(1,2,3,4,5,6,7,8,9,0);
+        List<Integer> ids = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 0);
         CompletableFuture<List<User>> future = CompletableFuture.completedFuture(ids).thenComposeAsync(list -> {
             System.out.println("sleep ====");
             sleep(5);
@@ -66,7 +65,7 @@ public class CompletableFutureTest {
     }
 
     private static void test3() {
-        List<Integer> ids = List.of(1,2,3,4,5,6,7,8,9,0);
+        List<Integer> ids = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 0);
         Flux<Integer> flux = Flux.fromIterable(ids);
         Flux<User> userFlux = flux.flatMap(id -> {
             Mono<String> name = Mono.fromFuture(getNameFuture(id));
@@ -87,7 +86,8 @@ public class CompletableFutureTest {
 
     private static CompletableFuture<String> getNameFuture(Integer id) {
         return CompletableFuture.supplyAsync(() -> {
-            System.out.println("name in :" + id + "  ,size:" + ForkJoinPool.commonPool().getPoolSize() + "====thread:" + Thread.currentThread());
+            System.out.println("name in :" + id + "  ,size:" + ForkJoinPool.commonPool().getPoolSize() + "====thread:"
+                    + Thread.currentThread());
             sleep(5);
             int i = 1 / 0;
             return "name" + id;
@@ -95,14 +95,15 @@ public class CompletableFutureTest {
     }
 
     private static Integer getState(Integer id) {
-        System.out.println("******state in :" + id + "  ,size:" + ForkJoinPool.commonPool().getPoolSize() + "====thread:" + Thread.currentThread());
+        System.out.println("******state in :" + id + "  ,size:" + ForkJoinPool.commonPool().getPoolSize()
+                + "====thread:" + Thread.currentThread());
         sleep(5);
         return 0 - id;
     }
 
     private static void sleep(Integer time) {
         try {
-            delayQueue.poll(time,TimeUnit.SECONDS);
+            delayQueue.poll(time, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

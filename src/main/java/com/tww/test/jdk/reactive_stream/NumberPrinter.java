@@ -45,16 +45,16 @@ public class NumberPrinter {
     private static void test2() {
         CustomerSubscriber subscriber = new CustomerSubscriber();
 
-        SubmissionPublisher<String> publisher = new SubmissionPublisher<>(Executors.newFixedThreadPool(10),2);
+        SubmissionPublisher<String> publisher = new SubmissionPublisher<>(Executors.newFixedThreadPool(10), 2);
         publisher.subscribe(subscriber);
         CompletableFuture.runAsync(() -> {
             IntStream.rangeClosed(1, 20).forEach(i -> {
                 DelayUtils.sleep(300L, TimeUnit.MILLISECONDS);
                 System.out.println("publish:" + i);
-//                publisher.submit(i + "s");
-                publisher.offer(i + "drop",(sub, s) -> Long.valueOf(s.substring(0, 1)) > 15);
+                // publisher.submit(i + "s");
+                publisher.offer(i + "drop", (sub, s) -> Long.valueOf(s.substring(0, 1)) > 15);
             });
-//            publisher.closeExceptionally(new RuntimeException("error end"));
+            // publisher.closeExceptionally(new RuntimeException("error end"));
         });
 
         DelayUtils.sleep(50L);
