@@ -1,7 +1,6 @@
 package com.tww.test.arithmetic.timewheel;
 
 /**
- * Created by Anur IjuoKaruKas on 2018/10/16
  *
  * 需要延迟执行的任务，放在槽 {@link Bucket} 里面
  */

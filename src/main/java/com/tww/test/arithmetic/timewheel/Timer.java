@@ -12,7 +12,6 @@ import org.apache.logging.log4j.Logger;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
 /**
- * Created by Anur IjuoKaruKas on 2018/10/17
  */
 public class Timer {
 

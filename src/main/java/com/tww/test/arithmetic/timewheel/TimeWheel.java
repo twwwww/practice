@@ -3,7 +3,6 @@ package com.tww.test.arithmetic.timewheel;
 import java.util.concurrent.DelayQueue;
 
 /**
- * Created by Anur IjuoKaruKas on 2018/10/16
  *
  * 时间轮，可以推进时间和添加任务
  */

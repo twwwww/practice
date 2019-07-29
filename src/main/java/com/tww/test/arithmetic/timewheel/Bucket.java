@@ -7,7 +7,6 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Consumer;
 
 /**
- * Created by Anur IjuoKaruKas on 2018/10/16
  *
  * 槽、或者说桶
  */
