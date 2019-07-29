@@ -55,7 +55,7 @@ public class Timer {
 
         bossThreadPool.execute(() -> {
             while (true) {
-                INSTANCE.advanceClock(20);
+                INSTANCE.turnOn();
             }
         });
     }
@@ -65,15 +65,25 @@ public class Timer {
      */
     public void addTask(TimedTask timedTask) {
         if (!timeWheel.addTask(timedTask)) {
-            if (!timedTask.isCancle()) {
+            if (!timedTask.isCancel()) {
                 workerThreadPool.submit(timedTask.getTask());
             }
         }
     }
 
     /**
-     * 推进一下时间轮的指针，并且将delayQueue中的任务取出来再重新扔进去
+     * 推进一下时间轮的指针，并且将delayQueue中的任务取出来再重新扔进去(task进去下一层或直接执行)
      */
+    private void turnOn() {
+        try {
+            Bucket bucket = delayQueue.take();
+            timeWheel.advanceClock(bucket.getExpire());
+            bucket.flush(this::addTask);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     private void advanceClock(long timeout) {
         try {
             Bucket bucket = delayQueue.poll(timeout, TimeUnit.MILLISECONDS);

@@ -18,7 +18,7 @@ public class TimedTask {
     private Runnable task;
 
     /** 是否取消 */
-    private volatile boolean cancle;
+    private volatile boolean cancel;
 
     protected Bucket bucket;
 
@@ -35,15 +35,15 @@ public class TimedTask {
         this.next = null;
         this.pre = null;
         this.expireTimestamp = System.currentTimeMillis() + delayMs;
-        this.cancle = false;
+        this.cancel = false;
     }
 
-    public void cancle() {
-        cancle = true;
+    public void cancel() {
+        cancel = true;
     }
 
-    public boolean isCancle() {
-        return cancle;
+    public boolean isCancel() {
+        return cancel;
     }
 
     public Runnable getTask() {

@@ -56,25 +56,28 @@ public class TimeWheel {
 
     /**
      * 添加任务到某个时间轮
+     * 1.delayMs < 1 * tickMs （最小时间刻度） : 到期，添加失败，直接执行任务
+     * 2.delayMs > wheelSize * tickMs (当前时间轮最大刻度) ：需要借助上层时间轮
+     * 3.放入当前时间轮中
      */
     public boolean addTask(TimedTask timedTask) {
         long expireTimestamp = timedTask.getExpireTimestamp();
         long delayMs = expireTimestamp - currentTimestamp;
-        if (delayMs < tickMs) {// 到期了
+        if (delayMs < tickMs) {
             return false;
         } else {
-
             // 扔进当前时间轮的某个槽中，只有时间【大于某个槽】，才会放进去
             if (delayMs < interval) {
                 int bucketIndex = (int) (((delayMs + currentTimestamp) / tickMs) % wheelSize);
 
                 Bucket bucket = buckets[bucketIndex];
                 bucket.addTask(timedTask);
-                if (bucket.setExpire(delayMs + currentTimestamp - (delayMs + currentTimestamp) % tickMs)) {
+                //槽的精度为tickMs
+                if (bucket.setExpire(expireTimestamp - expireTimestamp % tickMs)) {
                     delayQueue.offer(bucket);
                 }
             } else {
-                TimeWheel timeWheel = getOverflowWheel();// 当maybeInThisBucket大于等于wheelSize时，需要将它扔到上一层的时间轮
+                TimeWheel timeWheel = getOverflowWheel();
                 timeWheel.addTask(timedTask);
             }
         }
