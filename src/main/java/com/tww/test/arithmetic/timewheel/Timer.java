@@ -25,7 +25,7 @@ public class Timer {
 
     /** 只有一个线程的无限阻塞队列线程池 */
     private ExecutorService workerThreadPool;
-
+    /** 时间推进线程 */
     private ExecutorService bossThreadPool;
 
     private static Timer INSTANCE;
