@@ -43,7 +43,7 @@ public class SimpleTimeRound {
             }
             System.out.println("now_time:" + new Date());
             TimeScale timeScale = scales.get(index);
-            timeScale.scheduleTask();
+            timeScale.scheduleTask(executor);
             index++;
             DelayQueue delayQueue = new DelayQueue();
             delayQueue.poll(1,timeUnit);
