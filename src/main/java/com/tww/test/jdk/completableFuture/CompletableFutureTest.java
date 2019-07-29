@@ -80,7 +80,10 @@ public class CompletableFutureTest {
             });
             return userMono;
         });
-        Mono<List<User>> results = userFlux.collectList();
+        Mono<List<User>> results = userFlux.collectList().onErrorResume(throwable -> {
+            throwable.printStackTrace();
+            return Mono.empty();
+        });
         List<User> users = results.block();
         System.out.println(users);
     }
