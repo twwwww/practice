@@ -33,7 +33,7 @@ public class StockChanceUtil {
         }
         List<EsHit> esHits = JSONObject.parseArray(sb.toString(), EsHit.class);
         List<Long> chanceIds = esHits.stream()
-                .map(ch -> ch.get_source().getId())
+                .map(ch -> ch.get_source().getCustomerId())
                 .collect(Collectors.toList());
         System.out.println(chanceIds);
     }

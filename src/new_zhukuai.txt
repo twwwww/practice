@@ -1,0 +1,161 @@
+{
+  "from": 0,
+  "size": 0,
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "terms": {
+            "categoryId": [
+              ##CategoryIds##
+            ]
+          }
+        },
+        {
+          "nested": {
+            "path": "orderList",
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "term": {
+                      "orderList.orderType": 0
+                    }
+                  },
+                  {
+                    "term": {
+                      "orderList.parentCategoryId": 7
+                    }
+                  },
+                  {
+                    "nested": {
+                      "path": "orderList.goodsList",
+                      "query": {
+                        "bool": {
+                          "must": [
+                            {
+                              "term": {
+                                "orderList.goodsList.goodsAttribute": 0
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "must_not": [
+        {
+          "bool": {
+            "should": [
+              {
+                "terms": {
+                  "id": [
+                    ##DeleteChanceIds##
+                  ]
+                }
+              },
+              {
+                "nested": {
+                  "path": "orderList",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "bool": {
+                            "must": [
+                              {
+                                "term": {
+                                  "orderList.orderType": 0
+                                }
+                              },
+                              {
+                                "term": {
+                                  "orderList.parentCategoryId": 7
+                                }
+                              },
+                              {
+                                "nested": {
+                                  "path": "orderList.goodsList",
+                                  "query": {
+                                    "bool": {
+                                      "must": [
+                                        {
+                                          "term": {
+                                            "orderList.goodsList.goodsAttribute": 0
+                                          }
+                                        },
+                                        {
+                                          "terms": {
+                                            "orderList.goodsList.goodsLabel": [
+                                              3,
+                                              4,
+                                              8
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "aggs": {
+    "groupId": {
+      "terms": {
+        "field": "id",
+        "size": ##Size##
+      },
+      "aggs": {
+        "chance": {
+          "nested": {
+            "path": "orderList"
+          },
+          "aggs": {
+            "latest_order": {
+              "max": {
+                "script": {
+                  "inline": "if (doc['orderList.parentCategoryId'].value == 7 && doc['orderList.netPayMoney' ].value > 1 && doc['orderList.orderType'].value == 0) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
+                }
+              }
+            }
+          }
+        },
+        "lastAssignTime": {
+          "max": {
+            "field": "lastAssignTime"
+          }
+        },
+        "having": {
+          "bucket_selector": {
+            "buckets_path": {
+              "latestOrder": "chance.latest_order",
+              "lastAssignTime": "lastAssignTime"
+            },
+            "script": {
+              "inline": " (params.lastAssignTime < params.latestOrder  || params.lastAssignTime.equals('null')) && params.latestOrder> 1535731200000L && params.latestOrder < ##Date1##L && params.latestOrder % 10000 > 0.001 * 300"
+            }
+          }
+        }
+      }
+    }
+  }
+}
