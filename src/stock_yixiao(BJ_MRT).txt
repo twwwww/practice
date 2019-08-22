@@ -8,7 +8,7 @@
           "range": {
             "lastCallTime": {
               "from": null,
-              "to": ##Date15##,
+              "to": ##Date3##,
               "include_lower": true,
               "include_upper": true,
               "boost": 1
@@ -35,7 +35,7 @@
                   },
                   {
                     "term": {
-                      "orderList.parentCategoryId": 5
+                      "orderList.parentCategoryId": 100175
                     }
                   },
                   {
@@ -49,16 +49,7 @@
                                 "orderList.goodsList.goodsAttribute": 0
                               }
                             }
-                          ],
-                         "must_not": [
-                           {
-                             "terms": {
-                               "orderList.goodsList.categoryChildId": [
-                                 100213
-                               ]
-                             }
-                           }
-                         ]
+                          ]
                         }
                       }
                     }
@@ -96,7 +87,7 @@
                               },
                               {
                                 "term": {
-                                  "orderList.parentCategoryId": 5
+                                  "orderList.parentCategoryId": 100175
                                 }
                               },
                               {
@@ -137,18 +128,7 @@
                               },
                               {
                                 "term": {
-                                  "orderList.parentCategoryId": 5
-                                }
-                              },
-                              {
-                                "range": {
-                                  "orderList.netPayTime": {
-                                    "from": 1535731200000,
-                                    "to": null,
-                                    "include_lower": true,
-                                    "include_upper": true,
-                                    "boost": 1
-                                  }
+                                  "orderList.parentCategoryId": 100175
                                 }
                               },
                               {
@@ -163,8 +143,29 @@
                                           }
                                         },
                                         {
-                                          "wildcard": {
-                                            "orderList.goodsList.goodsName": "*私塾通关班2019（客观）*"
+                                          "bool": {
+                                            "should": [
+                                              {
+                                                "wildcard": {
+                                                  "orderList.goodsList.goodsName": "*双证*"
+                                                }
+                                              },
+                                              {
+                                                "wildcard": {
+                                                  "orderList.goodsList.goodsName": "*学历*"
+                                                }
+                                              },
+                                              {
+                                                "wildcard": {
+                                                  "orderList.goodsList.goodsName": "*预科*"
+                                                }
+                                              },
+                                              {
+                                                "wildcard": {
+                                                  "orderList.goodsList.goodsName": "*强哥*"
+                                                }
+                                              }
+                                            ]
                                           }
                                         }
                                       ]
@@ -201,7 +202,7 @@
             "latest_order": {
               "max": {
                 "script": {
-                  "inline": "if (doc['orderList.parentCategoryId'].value == 5 && doc['orderList.netPayMoney' ].value > 1 && doc['orderList.orderType'].value == 0) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value % 10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
+                  "inline": "if (doc['orderList.parentCategoryId'].value == 100175 && doc['orderList.netPayMoney' ].value > 1 && doc['orderList.orderType'].value == 0) {long reduceNetPayTime = doc['orderList.netPayTime'].value - 1000000000000L;long orderUserCateType = doc['orderList.orderUserCateType'].value;double netPayMoney = doc['orderList.netPayMoney'].value;return (reduceNetPayTime - reduceNetPayTime % 10000) * 10 + orderUserCateType * 10000 + netPayMoney *0.001} else { return 0 }"
                 }
               }
             }
@@ -213,7 +214,7 @@
               "latestOrder": "chance.latest_order"
             },
             "script": {
-              "inline": "params.latestOrder>= 1501516800000L && params.latestOrder <= 1533139199000L && params.latestOrder % 10000 >= 0.001 * 200 && params.latestOrder % 10000 <= 0.01 * 10000"
+              "inline": "params.latestOrder> (1535731200000L -1000000000000L) * 10 && params.latestOrder < (##Date15##L -1000000000000L) * 10 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 != 2 && params.latestOrder % 10000 >= 0.001 * 2000"
             }
           }
         }

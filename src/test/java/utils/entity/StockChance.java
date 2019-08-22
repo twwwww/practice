@@ -8,6 +8,8 @@ import java.util.List;
 public class StockChance {
     // 机会id
     private Long id;
+
+    private Long distinct_id;
     // 类别
     private Long categoryId;
     // 父类别
@@ -90,6 +92,14 @@ public class StockChance {
 
     // 标签列表
     private List<LabelInfo> labels;
+
+    public Long getDistinct_id() {
+        return distinct_id;
+    }
+
+    public void setDistinct_id(Long distinct_id) {
+        this.distinct_id = distinct_id;
+    }
 
     public List<LabelInfo> getLabels() {
         return labels;

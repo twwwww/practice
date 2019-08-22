@@ -16,7 +16,7 @@ public class StockChanceUtil {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        parseAggsJsonStr();
+        parseJsonStr();
     }
 
     private static void parseJsonStr() throws Exception {
@@ -33,7 +33,7 @@ public class StockChanceUtil {
         }
         List<EsHit> esHits = JSONObject.parseArray(sb.toString(), EsHit.class);
         List<Long> chanceIds = esHits.stream()
-                .map(ch -> ch.get_source().getCustomerId())
+                .map(ch -> ch.get_source().getDistinct_id())
                 .collect(Collectors.toList());
         System.out.println(chanceIds);
     }
