@@ -1,749 +1,93 @@
 [
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26621297-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26621297"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-3437761-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "3437761"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26611403-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26611403"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26622949-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26622949"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-10091931-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "10091931"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-23830303-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "23830303"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26622131-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26622131"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-16520697-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "16520697"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-25899835-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "25899835"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26387699-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26387699"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-21913073-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "21913073"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26624373-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26624373"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-9461303-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "9461303"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-5519173-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "5519173"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-4206843-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "4206843"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-1303145-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "1303145"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-25536271-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "25536271"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26493023-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26493023"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26624521-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26624521"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26612741-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26612741"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-25923221-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "25923221"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-6862875-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "6862875"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26621079-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26621079"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-25671501-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "25671501"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26449261-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26449261"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26594351-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26594351"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26623545-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26623545"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26257101-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26257101"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26413207-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26413207"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26525899-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26525899"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26624593-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26624593"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-23146339-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "23146339"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26624891-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26624891"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-2109567-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "2109567"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-14609601-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "14609601"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-1206701-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "1206701"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26619927-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26619927"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-614384-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "614384"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26623803-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26623803"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-2780365-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "2780365"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-24956163-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "24956163"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26590669-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26590669"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26461631-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26461631"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26489473-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26489473"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26624959-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26624959"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-14659479-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "14659479"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26624181-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26624181"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26108673-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26108673"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26619945-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26619945"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26620105-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26620105"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26620383-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26620383"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-25503705-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "25503705"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26620951-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26620951"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-4622081-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "4622081"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-17491795-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "17491795"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26622431-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26622431"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-25523251-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "25523251"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-10067599-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "10067599"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-18153495-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "18153495"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-3321377-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "3321377"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-18569015-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "18569015"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26319931-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26319931"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-25733583-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "25733583"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-24831971-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "24831971"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-17835171-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "17835171"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-25953435-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "25953435"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26328691-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26328691"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-25697975-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "25697975"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26596507-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26596507"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-20124539-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "20124539"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26315991-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26315991"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26117635-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26117635"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-16506781-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "16506781"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26512539-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26512539"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26622709-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26622709"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-11244031-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "11244031"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26470025-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26470025"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26624281-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26624281"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-19964763-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "19964763"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26596511-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26596511"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-25648037-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "25648037"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-26594789-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "26594789"
-                }
-            },
-            {
-                "_index": "distinct_label_index_2019",
-                "_type": "distinct_label_type",
-                "_id": "6-21242133-275",
-                "_score": 0,
-                "_source": {
-                    "distinct_id": "21242133"
-                }
-            }
-        ]
+                {
+                    "key": 12014759,
+                    "doc_count": 1,
+                    "chance": {
+                        "doc_count": 1,
+                        "latest_order": {
+                            "value": 1.566006810001E12
+                        }
+                    },
+                    "lastAssignTime": {
+                        "value": 1.566006585E12
+                    }
+                },
+                {
+                    "key": 23139271,
+                    "doc_count": 1,
+                    "chance": {
+                        "doc_count": 1,
+                        "latest_order": {
+                            "value": 1.566368610004E12
+                        }
+                    },
+                    "lastAssignTime": {
+                        "value": 1.565348384E12
+                    }
+                },
+                {
+                    "key": 24231005,
+                    "doc_count": 1,
+                    "chance": {
+                        "doc_count": 1,
+                        "latest_order": {
+                            "value": 1.564905150005E12
+                        }
+                    },
+                    "lastAssignTime": {
+                        "value": 1.563693205E12
+                    }
+                },
+                {
+                    "key": 25555617,
+                    "doc_count": 1,
+                    "chance": {
+                        "doc_count": 1,
+                        "latest_order": {
+                            "value": 1.566448430004E12
+                        }
+                    },
+                    "lastAssignTime": {
+                        "value": 1.566446033E12
+                    }
+                },
+                {
+                    "key": 27449720,
+                    "doc_count": 1,
+                    "chance": {
+                        "doc_count": 1,
+                        "latest_order": {
+                            "value": 1.566357090004E12
+                        }
+                    },
+                    "lastAssignTime": {
+                        "value": 1.565951694E12
+                    }
+                },
+                {
+                    "key": 27492134,
+                    "doc_count": 1,
+                    "chance": {
+                        "doc_count": 1,
+                        "latest_order": {
+                            "value": 1.566459510005E12
+                        }
+                    },
+                    "lastAssignTime": {
+                        "value": 1.566354623E12
+                    }
+                },
+                {
+                    "key": 27870364,
+                    "doc_count": 1,
+                    "chance": {
+                        "doc_count": 1,
+                        "latest_order": {
+                            "value": 1.566440940006E12
+                        }
+                    },
+                    "lastAssignTime": {
+                        "value": 1.566367621E12
+                    }
+                }
+            ]

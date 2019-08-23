@@ -1,5 +1,6 @@
 package utils;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import utils.entity.*;
 
@@ -16,7 +17,7 @@ public class StockChanceUtil {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        parseJsonStr();
+        parseAggsJsonStr();
     }
 
     private static void parseJsonStr() throws Exception {
@@ -33,7 +34,7 @@ public class StockChanceUtil {
         }
         List<EsHit> esHits = JSONObject.parseArray(sb.toString(), EsHit.class);
         List<Long> chanceIds = esHits.stream()
-                .map(ch -> ch.get_source().getDistinct_id())
+                .map(ch -> ch.get_source().getId())
                 .collect(Collectors.toList());
         System.out.println(chanceIds);
     }
