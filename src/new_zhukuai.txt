@@ -106,6 +106,49 @@
                               }
                             ]
                           }
+                        },
+                        {
+                          "bool": {
+                            "must": [
+                              {
+                                "term": {
+                                  "orderList.orderType": 0
+                                }
+                              },
+                              {
+                                "term": {
+                                  "orderList.parentCategoryId": 7
+                                }
+                              },
+                              {
+                                "nested": {
+                                  "path": "orderList.goodsList",
+                                  "query": {
+                                    "bool": {
+                                      "must": [
+                                        {
+                                          "term": {
+                                            "orderList.goodsList.goodsAttribute": 0
+                                          }
+                                        },
+                                        {
+                                          "bool": {
+                                            "should": [
+                                              {
+                                                "wildcard": {
+                                                  "orderList.goodsList.goodsName": "*测试商品*"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
                         }
                       ]
                     }

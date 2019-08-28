@@ -164,6 +164,11 @@
                                                 "wildcard": {
                                                   "orderList.goodsList.goodsName": "*强哥*"
                                                 }
+                                              },
+                                              {
+                                                "wildcard": {
+                                                  "orderList.goodsList.goodsName": "*测试商品*"
+                                                }
                                               }
                                             ]
                                           }

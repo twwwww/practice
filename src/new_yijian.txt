@@ -155,8 +155,19 @@
                                           }
                                         },
                                         {
-                                          "wildcard": {
-                                            "orderList.goodsList.goodsName": "*皇家*"
+                                          "bool": {
+                                            "should": [
+                                              {
+                                                "wildcard": {
+                                                  "orderList.goodsList.goodsName": "*皇家*"
+                                                }
+                                              },
+                                              {
+                                                "wildcard": {
+                                                  "orderList.goodsList.goodsName": "*测试商品*"
+                                                }
+                                              }
+                                            ]
                                           }
                                         }
                                       ]
