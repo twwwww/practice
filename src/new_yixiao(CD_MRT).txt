@@ -74,6 +74,14 @@
                 }
               },
               {
+                "terms": {
+                  "lastInGroup": [
+                    317,367,431,509,591,799,1135,1137,1139,1151,1155,
+                    1159,1161,1189,1419,1453,1825,1881,1903,1985,2159
+                  ]
+                }
+              },
+              {
                 "nested": {
                   "path": "orderList",
                   "query": {
@@ -215,21 +223,13 @@
             }
           }
         },
-        "lastAssignTime": {
-          "max": {
-            "script": {
-              "inline": "return (doc['lastAssignTime'].value - 1000000000000L) * 10"
-            }
-          }
-        },
         "having": {
           "bucket_selector": {
             "buckets_path": {
-              "latestOrder": "chance.latest_order",
-              "lastAssignTime": "lastAssignTime"
+              "latestOrder": "chance.latest_order"
             },
             "script": {
-              "inline": "(params.lastAssignTime < params.latestOrder  || params.lastAssignTime.equals('null')) && params.latestOrder > (1564588800000L - 1000000000000L ) * 10 && params.latestOrder < (##Date1##L - 1000000000000L ) * 10 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 == 2 && params.latestOrder % 10000 >= 0.001 * 2000"
+              "inline": "params.latestOrder > (1564588800000L - 1000000000000L ) * 10 && params.latestOrder < (##Date1##L - 1000000000000L ) * 10 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 == 2 && params.latestOrder % 10000 >= 0.001 * 2000"
             }
           }
         }
