@@ -194,7 +194,7 @@
               "lastAssignTime": "lastAssignTime"
             },
             "script": {
-              "inline": " (params.lastAssignTime < params.latestOrder  || params.lastAssignTime.equals('null')) && params.latestOrder> 1535731200000L && params.latestOrder < ##Date1##L && params.latestOrder % 10000 > 0.001 * 300"
+              "inline": " (params.lastAssignTime < params.latestOrder  || params.lastAssignTime.equals('null')) && params.latestOrder> 1535731200000L && params.latestOrder < ##Date1##L && params.latestOrder % 10000 > 0.001 * 400"
             }
           }
         }

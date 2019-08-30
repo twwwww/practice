@@ -23,7 +23,7 @@ public class StockChanceUtil {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        parseJsonStr2();
+        parseJsonStr();
     }
 
     private static void parseJsonStr() throws Exception {
@@ -39,9 +39,9 @@ public class StockChanceUtil {
             }
         }
         List<EsHit> esHits = JSONObject.parseArray(sb.toString(), EsHit.class);
-        List<Long> chanceIds = esHits.stream().map(ch -> ch.get_source().getId()).collect(Collectors.toList());
-//        System.out.println(chanceIds);
-        chanceIds.forEach(System.out::println);
+        List<Long> chanceIds = esHits.stream().map(ch -> ch.get_source().getCustomerId()).collect(Collectors.toList());
+        System.out.println(chanceIds);
+//        chanceIds.forEach(System.out::println);
     }
 
     private static void parseJsonStr2() throws Exception {

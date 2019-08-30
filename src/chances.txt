@@ -2,401 +2,115 @@
             {
                 "_index": "stock_chance",
                 "_type": "stock_chance",
-                "_id": "7739625",
-                "_score": 1.0114208,
+                "_id": "805355",
+                "_score": 1.0,
                 "_source": {
-                    "id": 7739625,
-                    "categoryId": 100365,
-                    "parentCategoryId": 7,
-                    "mobileProvince": "山东",
-                    "loginTotalAmount": 19,
-                    "lastLoginTime": 1565867866953,
-                    "createTime": 1488356159000,
-                    "advisoryStatus": "StockVisit",
-                    "remark": "",
-                    "chanceSource": "LeaveMessage",
-                    "totalOrderAmount": 2,
-                    "totalOrderMoney": 29.0,
-                    "lastOrderTime": 1564575534000,
-                    "lastOrderCategoryId": null,
-                    "lastOrderCateType": null,
-                    "lastOrderGoodType": null,
-                    "lastOrderType": null,
-                    "lastOrderMoney": null,
-                    "lastCommunicationTime": 1552356496000,
-                    "level": "C",
-                    "mobile": "18854888095",
-                    "lastCallTime": 1552356465000,
-                    "callTotalAmount": 4,
-                    "customerId": 19759899,
-                    "spreadWay": 101,
-                    "spreadPlat": 27,
-                    "lastInGroup": 1593,
-                    "lastInGroupCateType": 0,
-                    "customerGroup": 4,
-                    "createType": 2,
-                    "transferAmount": 6,
-                    "detailConditionIds": [
-                        3459,
-                        2141,
-                        3155,
-                        3311
-                    ],
-                    "flowSource": "7d82f724-7790-4b7b-8beb-dba448f19499",
-                    "lastAssignTime": 1553084385000,
-                    "lastAssignEndTime": 1553154698000,
-                    "lastBackStockTime": 1566759239483,
-                    "lastUpdateTime": 1566759239483,
-                    "lastOrderUserCateType": null,
-                    "firstAssignDate": 1488356479000,
-                    "orderList": [
-                        {
-                            "id": 5901331,
-                            "netPayTime": 1564575534000,
-                            "orderType": 4,
-                            "netPayMoney": 1.0,
-                            "goodsList": [
-                                {
-                                    "id": 66565,
-                                    "goodsName": "【小北福利】超级讲师备考计划！",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 1,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 4,
-                                    "goodsLabel": 5,
-                                    "money": 1.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 0,
-                            "maxOrderMoney": 1.0
-                        },
-                        {
-                            "id": 4117707,
-                            "netPayTime": 1542686892000,
-                            "orderType": 5,
-                            "netPayMoney": 28.0,
-                            "goodsList": [
-                                {
-                                    "id": 53987,
-                                    "goodsName": "2019CPA注册会计师单科精讲班-财务成本管理",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 15.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 15.0
-                        }
-                    ],
-                    "labels": [
-                        {
-                            "labelId": 271,
-                            "createTime": 1564575544737,
-                            "updateTime": 1564575544737,
-                            "expireTime": null
-                        },
-                        {
-                            "labelId": 269,
-                            "createTime": 1564659308104,
-                            "updateTime": 1564659308104,
-                            "expireTime": null
-                        }
-                    ]
-                }
-            },
-            {
-                "_index": "stock_chance",
-                "_type": "stock_chance",
-                "_id": "6547361",
-                "_score": 1.0062447,
-                "_source": {
-                    "id": 6547361,
-                    "categoryId": 100341,
-                    "parentCategoryId": 7,
-                    "mobileProvince": "重庆",
-                    "loginTotalAmount": 21,
-                    "lastLoginTime": 1566954088225,
-                    "createTime": 1477457974000,
-                    "advisoryStatus": "StockVisit",
-                    "remark": "",
-                    "chanceSource": "Online",
-                    "totalOrderAmount": 2,
-                    "totalOrderMoney": 81.0,
-                    "lastOrderTime": 1564061244000,
-                    "lastOrderCategoryId": null,
-                    "lastOrderCateType": null,
-                    "lastOrderGoodType": null,
-                    "lastOrderType": null,
-                    "lastOrderMoney": null,
-                    "lastCommunicationTime": 1563440159000,
-                    "level": "C",
-                    "mobile": "18883257433",
-                    "lastCallTime": 1563440098000,
-                    "callTotalAmount": 38,
-                    "customerId": 13224091,
-                    "spreadWay": 101,
-                    "spreadPlat": 27,
-                    "lastInGroup": 1853,
-                    "lastInGroupCateType": 2,
-                    "customerGroup": 4,
-                    "createType": 3,
-                    "transferAmount": 7,
-                    "detailConditionIds": [
-                        3459,
-                        2141,
-                        3155,
-                        3426,
-                        3311
-                    ],
-                    "flowSource": "7fef8230-7ef5-4d27-854c-201163aa5d77",
-                    "lastAssignTime": 1556260803000,
-                    "lastAssignEndTime": 1557816607000,
-                    "lastBackStockTime": 1566757141667,
-                    "lastUpdateTime": 1566954088255,
-                    "lastOrderUserCateType": null,
-                    "firstAssignDate": 1477457974000,
-                    "orderList": [
-                        {
-                            "id": 5861675,
-                            "netPayTime": 1564061244000,
-                            "orderType": 4,
-                            "netPayMoney": 1.0,
-                            "goodsList": [
-                                {
-                                    "id": 66565,
-                                    "goodsName": "【小北福利】超级讲师备考计划！",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 1,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 4,
-                                    "goodsLabel": 5,
-                                    "money": 1.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 0,
-                            "maxOrderMoney": 1.0
-                        },
-                        {
-                            "id": 5835543,
-                            "netPayTime": 1563604062000,
-                            "orderType": 5,
-                            "netPayMoney": 80.0,
-                            "goodsList": [
-                                {
-                                    "id": 53977,
-                                    "goodsName": "2019CPA注册会计师精讲班【全科】",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 80.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 80.0
-                        }
-                    ],
-                    "labels": [
-                        {
-                            "labelId": 270,
-                            "createTime": 1563664020345,
-                            "updateTime": 1563664020345,
-                            "expireTime": null
-                        },
-                        {
-                            "labelId": 269,
-                            "createTime": 1564989291941,
-                            "updateTime": 1564989291941,
-                            "expireTime": null
-                        },
-                        {
-                            "labelId": 271,
-                            "createTime": 1564061244780,
-                            "updateTime": 1564061244780,
-                            "expireTime": null
-                        }
-                    ]
-                }
-            },
-            {
-                "_index": "stock_chance",
-                "_type": "stock_chance",
-                "_id": "19593895",
-                "_score": 1.0035638,
-                "_source": {
-                    "id": 19593895,
-                    "categoryId": 100047,
-                    "parentCategoryId": 7,
-                    "mobileProvince": "广东",
-                    "loginTotalAmount": 43,
-                    "lastLoginTime": 1566021531269,
-                    "createTime": 1539420306000,
+                    "id": 805355,
+                    "categoryId": 100377,
+                    "parentCategoryId": 5,
+                    "mobileProvince": "云南",
+                    "loginTotalAmount": 784,
+                    "lastLoginTime": 1567074055139,
+                    "createTime": 1370253223000,
                     "advisoryStatus": "StockVisit",
                     "remark": "",
                     "chanceSource": "Register",
-                    "totalOrderAmount": 4,
-                    "totalOrderMoney": 161.0,
-                    "lastOrderTime": 1564754869000,
-                    "lastOrderCategoryId": null,
-                    "lastOrderCateType": null,
-                    "lastOrderGoodType": null,
-                    "lastOrderType": null,
-                    "lastOrderMoney": null,
-                    "lastCommunicationTime": 1561711793000,
+                    "totalOrderAmount": 2,
+                    "totalOrderMoney": 3001.0,
+                    "lastOrderTime": 1551252761000,
+                    "lastOrderCategoryId": 5,
+                    "lastOrderCateType": 1,
+                    "lastOrderGoodType": 0,
+                    "lastOrderType": 0,
+                    "lastOrderMoney": 1.0,
+                    "lastCommunicationTime": 1566528782000,
                     "level": "C",
-                    "mobile": "13631668896",
-                    "lastCallTime": 1561711773000,
-                    "callTotalAmount": 40,
-                    "customerId": 18760283,
+                    "mobile": "13987500401",
+                    "lastCallTime": 1566528774000,
+                    "callTotalAmount": 97,
+                    "customerId": 924375,
                     "spreadWay": 95,
                     "spreadPlat": 17,
-                    "lastInGroup": 1691,
+                    "lastInGroup": 421,
                     "lastInGroupCateType": 0,
-                    "customerGroup": 4,
+                    "customerGroup": 3,
                     "createType": 1,
-                    "transferAmount": 3,
-                    "detailConditionIds": [
-                        3459,
-                        3311,
-                        2141,
-                        3155
-                    ],
-                    "flowSource": "fa345354-9dd6-41d9-b6d4-405cee687599",
-                    "lastAssignTime": 1560921382000,
-                    "lastAssignEndTime": 1561191084000,
-                    "lastBackStockTime": 1566777433197,
-                    "lastUpdateTime": 1566777433197,
-                    "lastOrderUserCateType": null,
-                    "firstAssignDate": 1539585300000,
+                    "transferAmount": 16,
+                    "detailConditionIds": [],
+                    "flowSource": "ef1225ab-53f1-4ab1-8de9-d5eb11073ec7",
+                    "lastAssignTime": 1565158255000,
+                    "lastAssignEndTime": 1566528787000,
+                    "lastBackStockTime": 1567006070750,
+                    "lastUpdateTime": 1567074054654,
+                    "lastOrderUserCateType": 1,
+                    "firstAssignDate": 1370253842000,
                     "orderList": [
                         {
-                            "id": 5913865,
-                            "netPayTime": 1564754869000,
-                            "orderType": 4,
+                            "id": 4801615,
+                            "netPayTime": 1551252761000,
+                            "orderType": 0,
                             "netPayMoney": 1.0,
                             "goodsList": [
                                 {
-                                    "id": 66565,
-                                    "goodsName": "【小北福利】超级讲师备考计划！",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 1,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 4,
-                                    "goodsLabel": 5,
-                                    "money": 1.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 0,
-                            "maxOrderMoney": 1.0
-                        },
-                        {
-                            "id": 5133133,
-                            "netPayTime": 1554209660000,
-                            "orderType": 4,
-                            "netPayMoney": 1.0,
-                            "goodsList": [
-                                {
-                                    "id": 63011,
-                                    "goodsName": "【桃子福利】~一元预约高效学习方案+专属报名指导",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 1,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 4,
-                                    "goodsLabel": 5,
-                                    "money": 1.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 0,
-                            "maxOrderMoney": 1.0
-                        },
-                        {
-                            "id": 3947227,
-                            "netPayTime": 1539767987000,
-                            "orderType": 4,
-                            "netPayMoney": 1.0,
-                            "goodsList": [
-                                {
-                                    "id": 52573,
-                                    "goodsName": "现场名额提前预定",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 1,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 4,
-                                    "goodsLabel": 5,
-                                    "money": 1.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 0,
-                            "maxOrderMoney": 1.0
-                        },
-                        {
-                            "id": 3931909,
-                            "netPayTime": 1539421854000,
-                            "orderType": 5,
-                            "netPayMoney": 158.0,
-                            "goodsList": [
-                                {
-                                    "id": 53977,
-                                    "goodsName": "2019CPA注册会计师精讲班【全科】",
-                                    "categoryId": 7,
+                                    "id": 59331,
+                                    "goodsName": "2019-律政精英定制班（主观）",
+                                    "categoryId": 5,
                                     "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 80.0,
+                                    "categoryChildId": 100305,
+                                    "cateType": 1,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 2,
+                                    "money": 1.0,
                                     "isTiedSaleGoods": 0
                                 }
                             ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
+                            "parentCategoryId": 5,
+                            "orderUserCateType": 1,
                             "hasFormal": 1,
-                            "maxOrderMoney": 80.0
+                            "maxOrderMoney": 1.0
+                        },
+                        {
+                            "id": 4801387,
+                            "netPayTime": 1551251681000,
+                            "orderType": 0,
+                            "netPayMoney": 3000.0,
+                            "goodsList": [
+                                {
+                                    "id": 59329,
+                                    "goodsName": "2019-律政精英定制班（客观）",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100305,
+                                    "cateType": 1,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 2,
+                                    "money": 7998.0,
+                                    "isTiedSaleGoods": 0
+                                },
+                                {
+                                    "id": 60409,
+                                    "goodsName": "2019（IPO相关法律案例实操课）",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100305,
+                                    "cateType": 1,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 2,
+                                    "money": 4280.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": 1,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 7998.0
                         }
                     ],
                     "labels": [
                         {
-                            "labelId": 271,
-                            "createTime": 1564754869157,
-                            "updateTime": 1564754869157,
-                            "expireTime": null
-                        },
-                        {
-                            "labelId": 269,
-                            "createTime": 1564755263791,
-                            "updateTime": 1564755263791,
+                            "labelId": 275,
+                            "createTime": 1564314678916,
+                            "updateTime": 1566207671915,
                             "expireTime": null
                         }
                     ]
@@ -405,976 +119,85 @@
             {
                 "_index": "stock_chance",
                 "_type": "stock_chance",
-                "_id": "15274201",
-                "_score": 1.0029496,
+                "_id": "13040177",
+                "_score": 1.0,
                 "_source": {
-                    "id": 15274201,
-                    "categoryId": 100047,
-                    "parentCategoryId": 7,
-                    "mobileProvince": "陕西",
-                    "loginTotalAmount": 20,
-                    "lastLoginTime": 1566738732682,
-                    "createTime": 1528068965000,
+                    "id": 13040177,
+                    "categoryId": 100377,
+                    "parentCategoryId": 5,
+                    "mobileProvince": "北京",
+                    "loginTotalAmount": 229,
+                    "lastLoginTime": 1567068349007,
+                    "createTime": 1519873207000,
                     "advisoryStatus": "StockVisit",
                     "remark": "",
-                    "chanceSource": "Textbook",
-                    "totalOrderAmount": 2,
-                    "totalOrderMoney": 16.0,
-                    "lastOrderTime": 1564129268000,
-                    "lastOrderCategoryId": null,
-                    "lastOrderCateType": null,
-                    "lastOrderGoodType": null,
-                    "lastOrderType": null,
-                    "lastOrderMoney": null,
-                    "lastCommunicationTime": 1561703765000,
+                    "chanceSource": "Online",
+                    "totalOrderAmount": 3,
+                    "totalOrderMoney": 4600.0,
+                    "lastOrderTime": 1547023264000,
+                    "lastOrderCategoryId": 5,
+                    "lastOrderCateType": 0,
+                    "lastOrderGoodType": 0,
+                    "lastOrderType": 0,
+                    "lastOrderMoney": 99.0,
+                    "lastCommunicationTime": 1565778431000,
                     "level": "C",
-                    "mobile": "15229210478",
-                    "lastCallTime": 1561703717000,
-                    "callTotalAmount": 39,
-                    "customerId": 12812617,
-                    "spreadWay": 97,
-                    "spreadPlat": 15,
-                    "lastInGroup": 1691,
+                    "mobile": "13301392252",
+                    "lastCallTime": 1566292782000,
+                    "callTotalAmount": 162,
+                    "customerId": 12752731,
+                    "spreadWay": 99,
+                    "spreadPlat": 19,
+                    "lastInGroup": 1929,
                     "lastInGroupCateType": 0,
-                    "customerGroup": 4,
-                    "createType": 4,
-                    "transferAmount": 2,
-                    "detailConditionIds": [
-                        3459,
-                        3426,
-                        3311,
-                        2141,
-                        3155
-                    ],
-                    "flowSource": "cfa0efb6-5db2-46b0-a0d8-696f5481bfd9",
-                    "lastAssignTime": 1560920094000,
-                    "lastAssignEndTime": 1561179603000,
-                    "lastBackStockTime": 1566771227197,
-                    "lastUpdateTime": 1566771227197,
+                    "customerGroup": 3,
+                    "createType": 3,
+                    "transferAmount": 20,
+                    "detailConditionIds": [],
+                    "flowSource": "41003966-95b9-4045-9e1c-1b3643fc92f6",
+                    "lastAssignTime": 1565072377000,
+                    "lastAssignEndTime": 1566292788000,
+                    "lastBackStockTime": 1567032313216,
+                    "lastUpdateTime": 1567068348671,
                     "lastOrderUserCateType": null,
-                    "firstAssignDate": 1528073831000,
+                    "firstAssignDate": 1519873207000,
                     "orderList": [
                         {
-                            "id": 5865063,
-                            "netPayTime": 1564129268000,
-                            "orderType": 4,
-                            "netPayMoney": 1.0,
-                            "goodsList": [
-                                {
-                                    "id": 66565,
-                                    "goodsName": "【小北福利】超级讲师备考计划！",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 1,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 4,
-                                    "goodsLabel": 5,
-                                    "money": 1.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 0,
-                            "maxOrderMoney": 1.0
-                        },
-                        {
-                            "id": 5436185,
-                            "netPayTime": 1558161432000,
-                            "orderType": 5,
-                            "netPayMoney": 15.0,
-                            "goodsList": [
-                                {
-                                    "id": 53979,
-                                    "goodsName": "2019CPA注册会计师单科精讲班-会计",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 15.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 15.0
-                        }
-                    ],
-                    "labels": [
-                        {
-                            "labelId": 270,
-                            "createTime": 1564128308534,
-                            "updateTime": 1566279354946,
-                            "expireTime": null
-                        },
-                        {
-                            "labelId": 269,
-                            "createTime": 1564130159455,
-                            "updateTime": 1564130159455,
-                            "expireTime": null
-                        },
-                        {
-                            "labelId": 271,
-                            "createTime": 1564129268031,
-                            "updateTime": 1564129268031,
-                            "expireTime": null
-                        }
-                    ]
-                }
-            },
-            {
-                "_index": "stock_chance",
-                "_type": "stock_chance",
-                "_id": "17008011",
-                "_score": 1.0025,
-                "_source": {
-                    "id": 17008011,
-                    "categoryId": 100365,
-                    "parentCategoryId": 7,
-                    "mobileProvince": "新疆",
-                    "loginTotalAmount": 21,
-                    "lastLoginTime": 1565409051963,
-                    "createTime": 1532944063000,
-                    "advisoryStatus": "StockVisit",
-                    "remark": "",
-                    "chanceSource": "Proxy",
-                    "totalOrderAmount": 8,
-                    "totalOrderMoney": 3497.0,
-                    "lastOrderTime": 1565328203000,
-                    "lastOrderCategoryId": null,
-                    "lastOrderCateType": null,
-                    "lastOrderGoodType": null,
-                    "lastOrderType": null,
-                    "lastOrderMoney": null,
-                    "lastCommunicationTime": 1562828124000,
-                    "level": "C",
-                    "mobile": "15276657593",
-                    "lastCallTime": 1562828109000,
-                    "callTotalAmount": 13,
-                    "customerId": 16692379,
-                    "spreadWay": 97,
-                    "spreadPlat": 23,
-                    "lastInGroup": 1687,
-                    "lastInGroupCateType": 0,
-                    "customerGroup": 4,
-                    "createType": 4,
-                    "transferAmount": 5,
-                    "detailConditionIds": [
-                        3459,
-                        2141,
-                        3155,
-                        3426,
-                        3311
-                    ],
-                    "flowSource": "b6b5ab11-cca0-445a-8510-77079221b00d",
-                    "lastAssignTime": 1562828109000,
-                    "lastAssignEndTime": 1562828128000,
-                    "lastBackStockTime": 1566773922629,
-                    "lastUpdateTime": 1566773922629,
-                    "lastOrderUserCateType": null,
-                    "firstAssignDate": 1533035295000,
-                    "orderList": [
-                        {
-                            "id": 5940113,
-                            "netPayTime": 1565328203000,
-                            "orderType": 4,
-                            "netPayMoney": 1.0,
-                            "goodsList": [
-                                {
-                                    "id": 66565,
-                                    "goodsName": "【小北福利】超级讲师备考计划！",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 1,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 4,
-                                    "goodsLabel": 5,
-                                    "money": 1.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 0,
-                            "maxOrderMoney": 1.0
-                        },
-                        {
-                            "id": 4388385,
-                            "netPayTime": 1546227111000,
-                            "orderType": 5,
-                            "netPayMoney": 1888.0,
-                            "goodsList": [
-                                {
-                                    "id": 59245,
-                                    "goodsName": "2019注册会计师-尊享私塾班-全科-(乾弘专属)",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 1888.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 1888.0
-                        },
-                        {
-                            "id": 3647841,
-                            "netPayTime": 1532944418000,
-                            "orderType": 5,
-                            "netPayMoney": 268.0,
-                            "goodsList": [
-                                {
-                                    "id": 52823,
-                                    "goodsName": "2018注册会计师-尊享私塾班 审计 乾弘专属）",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 268.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 268.0
-                        },
-                        {
-                            "id": 3647843,
-                            "netPayTime": 1532944418000,
-                            "orderType": 5,
-                            "netPayMoney": 268.0,
-                            "goodsList": [
-                                {
-                                    "id": 52821,
-                                    "goodsName": "2018注册会计师-尊享私塾班 财管 （乾弘专属）",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 268.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 268.0
-                        },
-                        {
-                            "id": 3647793,
-                            "netPayTime": 1532944066000,
-                            "orderType": 5,
-                            "netPayMoney": 268.0,
-                            "goodsList": [
-                                {
-                                    "id": 52813,
-                                    "goodsName": "2018注册会计师-尊享私塾班 经济法（乾弘专属）",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 268.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 268.0
-                        },
-                        {
-                            "id": 3647795,
-                            "netPayTime": 1532944066000,
-                            "orderType": 5,
-                            "netPayMoney": 268.0,
-                            "goodsList": [
-                                {
-                                    "id": 52811,
-                                    "goodsName": "2018注册会计师-尊享私塾班 会计 （乾弘专属）",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 268.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 268.0
-                        },
-                        {
-                            "id": 3647791,
-                            "netPayTime": 1532944065000,
-                            "orderType": 5,
-                            "netPayMoney": 268.0,
-                            "goodsList": [
-                                {
-                                    "id": 52819,
-                                    "goodsName": "2018注册会计师-尊享私塾班 战略风险（乾弘专属）",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 268.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 268.0
-                        },
-                        {
-                            "id": 3647789,
-                            "netPayTime": 1532944064000,
-                            "orderType": 5,
-                            "netPayMoney": 268.0,
-                            "goodsList": [
-                                {
-                                    "id": 52815,
-                                    "goodsName": "2018注册会计师-尊享私塾班 税法 （乾弘专属）",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 268.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 268.0
-                        }
-                    ],
-                    "labels": [
-                        {
-                            "labelId": 270,
-                            "createTime": 1565328630172,
-                            "updateTime": 1565328630172,
-                            "expireTime": null
-                        },
-                        {
-                            "labelId": 269,
-                            "createTime": 1565328033203,
-                            "updateTime": 1565409083438,
-                            "expireTime": null
-                        },
-                        {
-                            "labelId": 271,
-                            "createTime": 1565328204339,
-                            "updateTime": 1565328204339,
-                            "expireTime": null
-                        }
-                    ]
-                }
-            },
-            {
-                "_index": "stock_chance",
-                "_type": "stock_chance",
-                "_id": "21693723",
-                "_score": 1.0022736,
-                "_source": {
-                    "id": 21693723,
-                    "categoryId": 100365,
-                    "parentCategoryId": 7,
-                    "mobileProvince": "河南",
-                    "loginTotalAmount": 462,
-                    "lastLoginTime": 1566958244521,
-                    "createTime": 1544343654000,
-                    "advisoryStatus": "StockVisit",
-                    "remark": "",
-                    "chanceSource": "Proxy",
-                    "totalOrderAmount": 5,
-                    "totalOrderMoney": 793.0,
-                    "lastOrderTime": 1564305941000,
-                    "lastOrderCategoryId": null,
-                    "lastOrderCateType": null,
-                    "lastOrderGoodType": null,
-                    "lastOrderType": null,
-                    "lastOrderMoney": null,
-                    "lastCommunicationTime": 1551789591000,
-                    "level": "C",
-                    "mobile": "15637325160",
-                    "lastCallTime": 1551789461000,
-                    "callTotalAmount": 4,
-                    "customerId": 20926005,
-                    "spreadWay": 97,
-                    "spreadPlat": 23,
-                    "lastInGroup": 1593,
-                    "lastInGroupCateType": 0,
-                    "customerGroup": 4,
-                    "createType": 4,
-                    "transferAmount": 2,
-                    "detailConditionIds": [
-                        2141,
-                        3155,
-                        3311
-                    ],
-                    "flowSource": "85a431b1-27cf-4ee3-bac2-bceeeeaf5ced",
-                    "lastAssignTime": 1551160619000,
-                    "lastAssignEndTime": 1562032390323,
-                    "lastBackStockTime": 1566780618641,
-                    "lastUpdateTime": 1566958244366,
-                    "lastOrderUserCateType": null,
-                    "firstAssignDate": 1544411950000,
-                    "orderList": [
-                        {
-                            "id": 5873975,
-                            "netPayTime": 1564305941000,
-                            "orderType": 4,
-                            "netPayMoney": 1.0,
-                            "goodsList": [
-                                {
-                                    "id": 66565,
-                                    "goodsName": "【小北福利】超级讲师备考计划！",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 1,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 4,
-                                    "goodsLabel": 5,
-                                    "money": 1.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 0,
-                            "maxOrderMoney": 1.0
-                        },
-                        {
-                            "id": 4210527,
-                            "netPayTime": 1544343656000,
-                            "orderType": 5,
-                            "netPayMoney": 198.0,
-                            "goodsList": [
-                                {
-                                    "id": 54055,
-                                    "goodsName": "2019CPA注册会计师单科菁英班-会计",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 198.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 198.0
-                        },
-                        {
-                            "id": 4210523,
-                            "netPayTime": 1544343655000,
-                            "orderType": 5,
-                            "netPayMoney": 198.0,
-                            "goodsList": [
-                                {
-                                    "id": 54049,
-                                    "goodsName": "2019CPA注册会计师单科菁英班-战略与风险管理",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 198.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 198.0
-                        },
-                        {
-                            "id": 4210525,
-                            "netPayTime": 1544343655000,
-                            "orderType": 5,
-                            "netPayMoney": 198.0,
-                            "goodsList": [
-                                {
-                                    "id": 54053,
-                                    "goodsName": "2019CPA注册会计师单科菁英班-审计",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 198.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 198.0
-                        },
-                        {
-                            "id": 4210519,
-                            "netPayTime": 1544343654000,
-                            "orderType": 5,
-                            "netPayMoney": 198.0,
-                            "goodsList": [
-                                {
-                                    "id": 54051,
-                                    "goodsName": "2019CPA注册会计师单科菁英班-财务成本管理",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 198.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 198.0
-                        }
-                    ],
-                    "labels": [
-                        {
-                            "labelId": 271,
-                            "createTime": 1564305941969,
-                            "updateTime": 1564305941969,
-                            "expireTime": null
-                        }
-                    ]
-                }
-            },
-            {
-                "_index": "stock_chance",
-                "_type": "stock_chance",
-                "_id": "14808523",
-                "_score": 1.0022532,
-                "_source": {
-                    "id": 14808523,
-                    "categoryId": 100365,
-                    "parentCategoryId": 7,
-                    "mobileProvince": "陕西",
-                    "loginTotalAmount": 74,
-                    "lastLoginTime": 1566859630657,
-                    "createTime": 1526511965000,
-                    "advisoryStatus": "StockVisit",
-                    "remark": "",
-                    "chanceSource": "Proxy",
-                    "totalOrderAmount": 11,
-                    "totalOrderMoney": 4436.0,
-                    "lastOrderTime": 1566654982000,
-                    "lastOrderCategoryId": null,
-                    "lastOrderCateType": null,
-                    "lastOrderGoodType": null,
-                    "lastOrderType": null,
-                    "lastOrderMoney": null,
-                    "lastCommunicationTime": 1562662498000,
-                    "level": "C",
-                    "mobile": "13891510325",
-                    "lastCallTime": 1563796608000,
-                    "callTotalAmount": 31,
-                    "customerId": 14715847,
-                    "spreadWay": 97,
-                    "spreadPlat": 23,
-                    "lastInGroup": 1179,
-                    "lastInGroupCateType": 0,
-                    "customerGroup": 4,
-                    "createType": 4,
-                    "transferAmount": 9,
-                    "detailConditionIds": [
-                        3459,
-                        2141,
-                        3155,
-                        3426,
-                        3311
-                    ],
-                    "flowSource": "85a431b1-27cf-4ee3-bac2-bceeeeaf5ced",
-                    "lastAssignTime": 1563796608000,
-                    "lastAssignEndTime": 1564401841000,
-                    "lastBackStockTime": 1566770457828,
-                    "lastUpdateTime": 1566859630621,
-                    "lastOrderUserCateType": null,
-                    "firstAssignDate": 1529320375000,
-                    "orderList": [
-                        {
-                            "id": 6021785,
-                            "netPayTime": 1566654982000,
-                            "orderType": 4,
-                            "netPayMoney": 1.0,
-                            "goodsList": [
-                                {
-                                    "id": 66565,
-                                    "goodsName": "【小北福利】超级讲师备考计划！",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 1,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 4,
-                                    "goodsLabel": 5,
-                                    "money": 1.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 0,
-                            "maxOrderMoney": 1.0
-                        },
-                        {
-                            "id": 4318093,
-                            "netPayTime": 1545816800000,
-                            "orderType": 5,
-                            "netPayMoney": 1888.0,
-                            "goodsList": [
-                                {
-                                    "id": 59245,
-                                    "goodsName": "2019注册会计师-尊享私塾班-全科-(乾弘专属)",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 1888.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 1888.0
-                        },
-                        {
-                            "id": 4226809,
-                            "netPayTime": 1544521030000,
-                            "orderType": 5,
-                            "netPayMoney": 1560.0,
-                            "goodsList": [
-                                {
-                                    "id": 52809,
-                                    "goodsName": "2018注册会计师-尊享私塾班-全科 （乾弘专属）",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 1560.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 1560.0
-                        },
-                        {
-                            "id": 3359073,
-                            "netPayTime": 1527490818000,
-                            "orderType": 5,
-                            "netPayMoney": 198.0,
-                            "goodsList": [
-                                {
-                                    "id": 50123,
-                                    "goodsName": "2018CPA注册会计师单科菁英班-会计",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 198.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 198.0
-                        },
-                        {
-                            "id": 3359069,
-                            "netPayTime": 1527490817000,
-                            "orderType": 5,
-                            "netPayMoney": 198.0,
-                            "goodsList": [
-                                {
-                                    "id": 50131,
-                                    "goodsName": "2018CPA注册会计师单科菁英班-税法",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 198.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 198.0
-                        },
-                        {
-                            "id": 3359071,
-                            "netPayTime": 1527490817000,
-                            "orderType": 5,
-                            "netPayMoney": 198.0,
-                            "goodsList": [
-                                {
-                                    "id": 50133,
-                                    "goodsName": "2018CPA注册会计师单科菁英班-经济法",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 198.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 198.0
-                        },
-                        {
-                            "id": 3359067,
-                            "netPayTime": 1527490816000,
-                            "orderType": 5,
-                            "netPayMoney": 198.0,
-                            "goodsList": [
-                                {
-                                    "id": 50125,
-                                    "goodsName": "2018CPA注册会计师单科菁英班-审计",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 198.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 198.0
-                        },
-                        {
-                            "id": 3358949,
-                            "netPayTime": 1527489456000,
-                            "orderType": 5,
+                            "id": 4470091,
+                            "netPayTime": 1547023264000,
+                            "orderType": 0,
                             "netPayMoney": 99.0,
                             "goodsList": [
                                 {
-                                    "id": 49973,
-                                    "goodsName": "2018CPA注册会计师单科无忧班-审计",
-                                    "categoryId": 7,
+                                    "id": 55985,
+                                    "goodsName": "2019基础研习班",
+                                    "categoryId": 5,
                                     "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
                                     "goodsLabel": 1,
                                     "money": 99.0,
                                     "isTiedSaleGoods": 0
                                 }
                             ],
-                            "parentCategoryId": 7,
+                            "parentCategoryId": 5,
                             "orderUserCateType": null,
                             "hasFormal": 1,
                             "maxOrderMoney": 99.0
                         },
                         {
-                            "id": 3314297,
-                            "netPayTime": 1526511990000,
-                            "orderType": 5,
-                            "netPayMoney": 32.0,
-                            "goodsList": [
-                                {
-                                    "id": 49949,
-                                    "goodsName": "2018CPA注册会计师单科精讲班-税法",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 28.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 28.0
-                        },
-                        {
-                            "id": 3314299,
-                            "netPayTime": 1526511990000,
-                            "orderType": 5,
-                            "netPayMoney": 32.0,
-                            "goodsList": [
-                                {
-                                    "id": 49953,
-                                    "goodsName": "2018CPA注册会计师单科精讲班-会计",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 28.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 28.0
-                        },
-                        {
-                            "id": 3314295,
-                            "netPayTime": 1526511989000,
-                            "orderType": 5,
-                            "netPayMoney": 32.0,
-                            "goodsList": [
-                                {
-                                    "id": 49951,
-                                    "goodsName": "2018CPA注册会计师单科精讲班-经济法",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 28.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 28.0
-                        }
-                    ],
-                    "labels": [
-                        {
-                            "labelId": 271,
-                            "createTime": 1566654983102,
-                            "updateTime": 1566654983102,
-                            "expireTime": null
-                        },
-                        {
-                            "labelId": 269,
-                            "createTime": 1563717444736,
-                            "updateTime": 1566655014040,
-                            "expireTime": null
-                        },
-                        {
-                            "labelId": 270,
-                            "createTime": 1563750652002,
-                            "updateTime": 1563750652002,
-                            "expireTime": null
-                        }
-                    ]
-                }
-            },
-            {
-                "_index": "stock_chance",
-                "_type": "stock_chance",
-                "_id": "24526979",
-                "_score": 1.0008686,
-                "_source": {
-                    "id": 24526979,
-                    "categoryId": 100833,
-                    "parentCategoryId": 7,
-                    "mobileProvince": "山东",
-                    "loginTotalAmount": 70,
-                    "lastLoginTime": 1566526960191,
-                    "createTime": 1551919313000,
-                    "advisoryStatus": "StockVisit",
-                    "remark": "",
-                    "chanceSource": "Proxy",
-                    "totalOrderAmount": 3,
-                    "totalOrderMoney": 31.0,
-                    "lastOrderTime": 1564030413000,
-                    "lastOrderCategoryId": null,
-                    "lastOrderCateType": null,
-                    "lastOrderGoodType": null,
-                    "lastOrderType": null,
-                    "lastOrderMoney": null,
-                    "lastCommunicationTime": 1563161873000,
-                    "level": "C",
-                    "mobile": "15712753721",
-                    "lastCallTime": 1563161842000,
-                    "callTotalAmount": 11,
-                    "customerId": 25274807,
-                    "spreadWay": 97,
-                    "spreadPlat": 23,
-                    "lastInGroup": 2078,
-                    "lastInGroupCateType": 8,
-                    "customerGroup": 4,
-                    "createType": 4,
-                    "transferAmount": 2,
-                    "detailConditionIds": [
-                        3459,
-                        2141,
-                        3155,
-                        3311
-                    ],
-                    "flowSource": "85a431b1-27cf-4ee3-bac2-bceeeeaf5ced",
-                    "lastAssignTime": 1562846135000,
-                    "lastAssignEndTime": 1563161876000,
-                    "lastBackStockTime": 1566785495477,
-                    "lastUpdateTime": 1566785495477,
-                    "lastOrderUserCateType": null,
-                    "firstAssignDate": 1552530506000,
-                    "orderList": [
-                        {
-                            "id": 5858207,
-                            "netPayTime": 1564030413000,
+                            "id": 3051919,
+                            "netPayTime": 1521854953000,
                             "orderType": 4,
                             "netPayMoney": 1.0,
                             "goodsList": [
                                 {
-                                    "id": 66565,
-                                    "goodsName": "【小北福利】超级讲师备考计划！",
-                                    "categoryId": 7,
+                                    "id": 34407,
+                                    "goodsName": "1元预约导师追分体验——预测重考点课-三国",
+                                    "categoryId": 5,
                                     "goodsAttribute": 1,
-                                    "categoryChildId": 100047,
+                                    "categoryChildId": 100045,
                                     "cateType": 0,
                                     "goodsSaleType": 4,
                                     "goodsLabel": 5,
@@ -1382,180 +205,31 @@
                                     "isTiedSaleGoods": 0
                                 }
                             ],
-                            "parentCategoryId": 7,
+                            "parentCategoryId": 5,
                             "orderUserCateType": null,
                             "hasFormal": 0,
                             "maxOrderMoney": 1.0
                         },
                         {
-                            "id": 5245667,
-                            "netPayTime": 1555916334000,
-                            "orderType": 5,
-                            "netPayMoney": 15.0,
-                            "goodsList": [
-                                {
-                                    "id": 53983,
-                                    "goodsName": "2019CPA注册会计师单科精讲班-税法",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 15.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 15.0
-                        },
-                        {
-                            "id": 4892633,
-                            "netPayTime": 1551919315000,
-                            "orderType": 5,
-                            "netPayMoney": 15.0,
-                            "goodsList": [
-                                {
-                                    "id": 53979,
-                                    "goodsName": "2019CPA注册会计师单科精讲班-会计",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100211,
-                                    "cateType": 3,
-                                    "goodsSaleType": 5,
-                                    "goodsLabel": 1,
-                                    "money": 15.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 1,
-                            "maxOrderMoney": 15.0
-                        }
-                    ],
-                    "labels": [
-                        {
-                            "labelId": 269,
-                            "createTime": 1564191400392,
-                            "updateTime": 1564191400392,
-                            "expireTime": null
-                        },
-                        {
-                            "labelId": 271,
-                            "createTime": 1564030416540,
-                            "updateTime": 1564030416540,
-                            "expireTime": null
-                        }
-                    ]
-                }
-            },
-            {
-                "_index": "stock_chance",
-                "_type": "stock_chance",
-                "_id": "21777899",
-                "_score": 1.0000952,
-                "_source": {
-                    "id": 21777899,
-                    "categoryId": 100365,
-                    "parentCategoryId": 7,
-                    "mobileProvince": "海南",
-                    "loginTotalAmount": 266,
-                    "lastLoginTime": 1566955602385,
-                    "createTime": 1544523307000,
-                    "advisoryStatus": "StockVisit",
-                    "remark": "",
-                    "chanceSource": "Callin",
-                    "totalOrderAmount": 2,
-                    "totalOrderMoney": 4001.0,
-                    "lastOrderTime": 1566562387000,
-                    "lastOrderCategoryId": null,
-                    "lastOrderCateType": null,
-                    "lastOrderGoodType": null,
-                    "lastOrderType": null,
-                    "lastOrderMoney": null,
-                    "lastCommunicationTime": 1566467140000,
-                    "level": "C",
-                    "mobile": "13379988830",
-                    "lastCallTime": 1566466760000,
-                    "callTotalAmount": 18,
-                    "customerId": 21281529,
-                    "spreadWay": 99,
-                    "spreadPlat": 19,
-                    "lastInGroup": 1179,
-                    "lastInGroupCateType": 0,
-                    "customerGroup": 3,
-                    "createType": 4,
-                    "transferAmount": 8,
-                    "detailConditionIds": [
-                        3311
-                    ],
-                    "flowSource": "3e56cdb1-b609-45ff-8776-a1b52b8a8883",
-                    "lastAssignTime": 1561207909000,
-                    "lastAssignEndTime": 1566467145016,
-                    "lastBackStockTime": 1566816927001,
-                    "lastUpdateTime": 1566955602368,
-                    "lastOrderUserCateType": null,
-                    "firstAssignDate": 1544523307000,
-                    "orderList": [
-                        {
-                            "id": 6017631,
-                            "netPayTime": 1566562387000,
-                            "orderType": 4,
-                            "netPayMoney": 1.0,
-                            "goodsList": [
-                                {
-                                    "id": 66565,
-                                    "goodsName": "【小北福利】超级讲师备考计划！",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 1,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 4,
-                                    "goodsLabel": 5,
-                                    "money": 1.0,
-                                    "isTiedSaleGoods": 0
-                                }
-                            ],
-                            "parentCategoryId": 7,
-                            "orderUserCateType": null,
-                            "hasFormal": 0,
-                            "maxOrderMoney": 1.0
-                        },
-                        {
-                            "id": 4227251,
-                            "netPayTime": 1544593337000,
+                            "id": 2909623,
+                            "netPayTime": 1519912071000,
                             "orderType": 0,
-                            "netPayMoney": 4000.0,
+                            "netPayMoney": 4500.0,
                             "goodsList": [
                                 {
-                                    "id": 58787,
-                                    "goodsName": "2018双12活动-审计实操",
-                                    "categoryId": 7,
+                                    "id": 50111,
+                                    "goodsName": "(法考改革订制班)",
+                                    "categoryId": 5,
                                     "goodsAttribute": 0,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
-                                    "goodsSaleType": 0,
-                                    "goodsLabel": 2,
-                                    "money": 3998.0,
-                                    "isTiedSaleGoods": 0
-                                },
-                                {
-                                    "id": 58687,
-                                    "goodsName": "2018双12活动-私塾小灶班《六科》",
-                                    "categoryId": 7,
-                                    "goodsAttribute": 0,
-                                    "categoryChildId": 100047,
-                                    "cateType": 0,
+                                    "categoryChildId": 100305,
+                                    "cateType": 1,
                                     "goodsSaleType": 0,
                                     "goodsLabel": 2,
                                     "money": 7998.0,
                                     "isTiedSaleGoods": 0
                                 }
                             ],
-                            "parentCategoryId": 7,
+                            "parentCategoryId": 5,
                             "orderUserCateType": null,
                             "hasFormal": 1,
                             "maxOrderMoney": 7998.0
@@ -1563,9 +237,1244 @@
                     ],
                     "labels": [
                         {
-                            "labelId": 271,
-                            "createTime": 1566562388975,
-                            "updateTime": 1566562388975,
+                            "labelId": 275,
+                            "createTime": 1565001557656,
+                            "updateTime": 1565001557656,
+                            "expireTime": null
+                        }
+                    ]
+                }
+            },
+            {
+                "_index": "stock_chance",
+                "_type": "stock_chance",
+                "_id": "13139949",
+                "_score": 1.0,
+                "_source": {
+                    "id": 13139949,
+                    "categoryId": 100377,
+                    "parentCategoryId": 5,
+                    "mobileProvince": "山西",
+                    "loginTotalAmount": 221,
+                    "lastLoginTime": 1567067002117,
+                    "createTime": 1520300784000,
+                    "advisoryStatus": "StockVisit",
+                    "remark": "",
+                    "chanceSource": "LeaveMessage",
+                    "totalOrderAmount": 2,
+                    "totalOrderMoney": 5099.0,
+                    "lastOrderTime": 1538191095000,
+                    "lastOrderCategoryId": 5,
+                    "lastOrderCateType": 0,
+                    "lastOrderGoodType": 0,
+                    "lastOrderType": 0,
+                    "lastOrderMoney": 99.0,
+                    "lastCommunicationTime": 1564561885000,
+                    "level": "C",
+                    "mobile": "15934516533",
+                    "lastCallTime": 1564561845000,
+                    "callTotalAmount": 174,
+                    "customerId": 12884937,
+                    "spreadWay": 85,
+                    "spreadPlat": 4,
+                    "lastInGroup": 421,
+                    "lastInGroupCateType": 0,
+                    "customerGroup": 3,
+                    "createType": 0,
+                    "transferAmount": 36,
+                    "detailConditionIds": [
+                        2141,
+                        3155
+                    ],
+                    "flowSource": "a5d3fcf7-c2e4-45ac-b2e6-6ce2ebfdad21",
+                    "lastAssignTime": 1563267004000,
+                    "lastAssignEndTime": 1565166841000,
+                    "lastBackStockTime": 1567032517209,
+                    "lastUpdateTime": 1567067001784,
+                    "lastOrderUserCateType": 0,
+                    "firstAssignDate": 1520301396000,
+                    "orderList": [
+                        {
+                            "id": 3889767,
+                            "netPayTime": 1538191095000,
+                            "orderType": 0,
+                            "netPayMoney": 99.0,
+                            "goodsList": [
+                                {
+                                    "id": 55985,
+                                    "goodsName": "2019基础研习班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 1,
+                                    "money": 99.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": 0,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 99.0
+                        },
+                        {
+                            "id": 2948743,
+                            "netPayTime": 1520469903000,
+                            "orderType": 0,
+                            "netPayMoney": 5000.0,
+                            "goodsList": [
+                                {
+                                    "id": 49849,
+                                    "goodsName": "法考元年订制班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 2,
+                                    "money": 7998.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 7998.0
+                        }
+                    ],
+                    "labels": [
+                        {
+                            "labelId": 275,
+                            "createTime": 1563957391509,
+                            "updateTime": 1563957391509,
+                            "expireTime": null
+                        }
+                    ]
+                }
+            },
+            {
+                "_index": "stock_chance",
+                "_type": "stock_chance",
+                "_id": "2121541",
+                "_score": 1.0,
+                "_source": {
+                    "id": 2121541,
+                    "categoryId": 100377,
+                    "parentCategoryId": 5,
+                    "mobileProvince": "甘肃",
+                    "loginTotalAmount": 648,
+                    "lastLoginTime": 1567083634465,
+                    "createTime": 1404024570000,
+                    "advisoryStatus": "StockVisit",
+                    "remark": "",
+                    "chanceSource": "Online",
+                    "totalOrderAmount": 15,
+                    "totalOrderMoney": 22187.0,
+                    "lastOrderTime": 1543586284000,
+                    "lastOrderCategoryId": 5,
+                    "lastOrderCateType": 0,
+                    "lastOrderGoodType": 0,
+                    "lastOrderType": 0,
+                    "lastOrderMoney": 1225.0,
+                    "lastCommunicationTime": 1564566993000,
+                    "level": "C",
+                    "mobile": "13079333789",
+                    "lastCallTime": 1564566952000,
+                    "callTotalAmount": 106,
+                    "customerId": 2054121,
+                    "spreadWay": 99,
+                    "spreadPlat": 19,
+                    "lastInGroup": 421,
+                    "lastInGroupCateType": 0,
+                    "customerGroup": 3,
+                    "createType": 3,
+                    "transferAmount": 40,
+                    "detailConditionIds": [
+                        2141,
+                        3155,
+                        3714,
+                        4210,
+                        4210,
+                        4287
+                    ],
+                    "flowSource": "ac507fd1-6326-43d8-8152-84b63b662db7",
+                    "lastAssignTime": 1564125039000,
+                    "lastAssignEndTime": 1565172241000,
+                    "lastBackStockTime": 1567009897168,
+                    "lastUpdateTime": 1567083634491,
+                    "lastOrderUserCateType": 0,
+                    "firstAssignDate": 1404024570000,
+                    "orderList": [
+                        {
+                            "id": 4167615,
+                            "netPayTime": 1543586284000,
+                            "orderType": 0,
+                            "netPayMoney": 1225.0,
+                            "goodsList": [
+                                {
+                                    "id": 56681,
+                                    "goodsName": "皇家案例实操课",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100377,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 2,
+                                    "money": 3080.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": 0,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 3080.0
+                        },
+                        {
+                            "id": 4167649,
+                            "netPayTime": 1543586250000,
+                            "orderType": 0,
+                            "netPayMoney": 2275.0,
+                            "goodsList": [
+                                {
+                                    "id": 56637,
+                                    "goodsName": "2019皇家母题先锋班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100377,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 8,
+                                    "money": 5720.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": 0,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 5720.0
+                        },
+                        {
+                            "id": 3251655,
+                            "netPayTime": 1525439623000,
+                            "orderType": 4,
+                            "netPayMoney": 1.0,
+                            "goodsList": [
+                                {
+                                    "id": 34407,
+                                    "goodsName": "1元预约导师追分体验——预测重考点课-三国",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 1,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 4,
+                                    "goodsLabel": 5,
+                                    "money": 1.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 0,
+                            "maxOrderMoney": 1.0
+                        },
+                        {
+                            "id": 2654155,
+                            "netPayTime": 1511574332000,
+                            "orderType": 0,
+                            "netPayMoney": 199.0,
+                            "goodsList": [
+                                {
+                                    "id": 44719,
+                                    "goodsName": "2018高端研修班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 3,
+                                    "money": 199.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 199.0
+                        },
+                        {
+                            "id": 2194223,
+                            "netPayTime": 1494249532000,
+                            "orderType": 4,
+                            "netPayMoney": 1.0,
+                            "goodsList": [
+                                {
+                                    "id": 11937,
+                                    "goodsName": "一元抢购主观题核心背诵体验资料",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 1,
+                                    "categoryChildId": 100377,
+                                    "cateType": 0,
+                                    "goodsSaleType": 4,
+                                    "goodsLabel": 5,
+                                    "money": 1.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 0,
+                            "maxOrderMoney": 1.0
+                        },
+                        {
+                            "id": 2164763,
+                            "netPayTime": 1493292809000,
+                            "orderType": 0,
+                            "netPayMoney": 13800.0,
+                            "goodsList": [
+                                {
+                                    "id": 29495,
+                                    "goodsName": "【名师霞越尊享班】",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100377,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 0,
+                                    "money": 22800.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 22800.0
+                        },
+                        {
+                            "id": 2161945,
+                            "netPayTime": 1493212608000,
+                            "orderType": 4,
+                            "netPayMoney": 1.0,
+                            "goodsList": [
+                                {
+                                    "id": 11937,
+                                    "goodsName": "一元抢购主观题核心背诵体验资料",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 1,
+                                    "categoryChildId": 100377,
+                                    "cateType": 0,
+                                    "goodsSaleType": 4,
+                                    "goodsLabel": 5,
+                                    "money": 1.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 0,
+                            "maxOrderMoney": 1.0
+                        },
+                        {
+                            "id": 2154589,
+                            "netPayTime": 1493039201000,
+                            "orderType": 4,
+                            "netPayMoney": 1.0,
+                            "goodsList": [
+                                {
+                                    "id": 11937,
+                                    "goodsName": "一元抢购主观题核心背诵体验资料",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 1,
+                                    "categoryChildId": 100377,
+                                    "cateType": 0,
+                                    "goodsSaleType": 4,
+                                    "goodsLabel": 5,
+                                    "money": 1.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 0,
+                            "maxOrderMoney": 1.0
+                        },
+                        {
+                            "id": 2131175,
+                            "netPayTime": 1492246734000,
+                            "orderType": 4,
+                            "netPayMoney": 1.0,
+                            "goodsList": [
+                                {
+                                    "id": 11937,
+                                    "goodsName": "一元抢购主观题核心背诵体验资料",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 1,
+                                    "categoryChildId": 100377,
+                                    "cateType": 0,
+                                    "goodsSaleType": 4,
+                                    "goodsLabel": 5,
+                                    "money": 1.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 0,
+                            "maxOrderMoney": 1.0
+                        },
+                        {
+                            "id": 2126565,
+                            "netPayTime": 1492089653000,
+                            "orderType": 4,
+                            "netPayMoney": 1.0,
+                            "goodsList": [
+                                {
+                                    "id": 34407,
+                                    "goodsName": "1元预约导师追分体验——预测重考点课-三国",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 1,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 4,
+                                    "goodsLabel": 5,
+                                    "money": 1.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 0,
+                            "maxOrderMoney": 1.0
+                        },
+                        {
+                            "id": 1887847,
+                            "netPayTime": 1483156753000,
+                            "orderType": 0,
+                            "netPayMoney": 1800.0,
+                            "goodsList": [
+                                {
+                                    "id": 31705,
+                                    "goodsName": "VIP专辅旗舰班(双蛋特惠版)",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": null,
+                                    "money": 3980.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 3980.0
+                        },
+                        {
+                            "id": 1868757,
+                            "netPayTime": 1482236364000,
+                            "orderType": 4,
+                            "netPayMoney": 1.0,
+                            "goodsList": [
+                                {
+                                    "id": 30255,
+                                    "goodsName": "【名师霞越二期启动】1元抢购案例体验+2000优惠",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 1,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 4,
+                                    "goodsLabel": 5,
+                                    "money": 1.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 0,
+                            "maxOrderMoney": 1.0
+                        },
+                        {
+                            "id": 1187031,
+                            "netPayTime": 1436187084000,
+                            "orderType": 4,
+                            "netPayMoney": 1.0,
+                            "goodsList": [
+                                {
+                                    "id": 11937,
+                                    "goodsName": "一元抢购主观题核心背诵体验资料",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 1,
+                                    "categoryChildId": 100377,
+                                    "cateType": 0,
+                                    "goodsSaleType": 4,
+                                    "goodsLabel": 5,
+                                    "money": 1.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 0,
+                            "maxOrderMoney": 1.0
+                        },
+                        {
+                            "id": 978275,
+                            "netPayTime": 1419692754000,
+                            "orderType": 0,
+                            "netPayMoney": 2200.0,
+                            "goodsList": [
+                                {
+                                    "id": 11949,
+                                    "goodsName": "vip绝密内训班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": null,
+                                    "money": 4980.0,
+                                    "isTiedSaleGoods": 0
+                                },
+                                {
+                                    "id": 11367,
+                                    "goodsName": "民刑小灶+奇招拿下行政法+诉讼考点+至尊题海",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 4,
+                                    "goodsLabel": 5,
+                                    "money": 1495.2,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 4980.0
+                        },
+                        {
+                            "id": 873221,
+                            "netPayTime": 1404027353000,
+                            "orderType": 0,
+                            "netPayMoney": 680.0,
+                            "goodsList": [
+                                {
+                                    "id": 9193,
+                                    "goodsName": "一次通关保障班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": null,
+                                    "money": 1360.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 1360.0
+                        }
+                    ],
+                    "labels": [
+                        {
+                            "labelId": 273,
+                            "createTime": 1525363200352,
+                            "updateTime": 1525363200352,
+                            "expireTime": null
+                        },
+                        {
+                            "labelId": 274,
+                            "createTime": 1565870421956,
+                            "updateTime": 1565870421956,
+                            "expireTime": null
+                        },
+                        {
+                            "labelId": 275,
+                            "createTime": 1564060355233,
+                            "updateTime": 1567083651917
+                        }
+                    ]
+                }
+            },
+            {
+                "_index": "stock_chance",
+                "_type": "stock_chance",
+                "_id": "8297507",
+                "_score": 1.0,
+                "_source": {
+                    "id": 8297507,
+                    "categoryId": 100377,
+                    "parentCategoryId": 5,
+                    "mobileProvince": "浙江",
+                    "loginTotalAmount": 150,
+                    "lastLoginTime": 1567057071500,
+                    "createTime": 1491965394000,
+                    "advisoryStatus": "StockVisit",
+                    "remark": "",
+                    "chanceSource": "Register",
+                    "totalOrderAmount": 1,
+                    "totalOrderMoney": 1500.0,
+                    "lastOrderTime": 1556629887000,
+                    "lastOrderCategoryId": 5,
+                    "lastOrderCateType": 8,
+                    "lastOrderGoodType": 0,
+                    "lastOrderType": 0,
+                    "lastOrderMoney": 1499.75,
+                    "lastCommunicationTime": 1565180600000,
+                    "level": "C",
+                    "mobile": "13957270889",
+                    "lastCallTime": 1565180546000,
+                    "callTotalAmount": 84,
+                    "customerId": 9353295,
+                    "spreadWay": 101,
+                    "spreadPlat": 27,
+                    "lastInGroup": 421,
+                    "lastInGroupCateType": 0,
+                    "customerGroup": 3,
+                    "createType": 1,
+                    "transferAmount": 7,
+                    "detailConditionIds": [],
+                    "flowSource": "03e55e3f-abd7-4ead-bf58-16b9d49a0a75",
+                    "lastAssignTime": 1562825428000,
+                    "lastAssignEndTime": 1565417641000,
+                    "lastBackStockTime": 1567024043058,
+                    "lastUpdateTime": 1567057071485,
+                    "lastOrderUserCateType": null,
+                    "firstAssignDate": 1491966242000,
+                    "orderList": [
+                        {
+                            "id": 5309159,
+                            "netPayTime": 1556629887000,
+                            "orderType": 0,
+                            "netPayMoney": 1500.0,
+                            "goodsList": [
+                                {
+                                    "id": 62267,
+                                    "goodsName": "2019主客一体保障班（客观）",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100831,
+                                    "cateType": 8,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 2,
+                                    "money": 5998.0,
+                                    "isTiedSaleGoods": 0
+                                },
+                                {
+                                    "id": 62269,
+                                    "goodsName": "2019主客一体保障班（主观）",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100831,
+                                    "cateType": 8,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 2,
+                                    "money": 1.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 5998.0
+                        }
+                    ],
+                    "labels": [
+                        {
+                            "labelId": 275,
+                            "createTime": 1561037822375,
+                            "updateTime": 1561037822375,
+                            "expireTime": null
+                        }
+                    ]
+                }
+            },
+            {
+                "_index": "stock_chance",
+                "_type": "stock_chance",
+                "_id": "14903303",
+                "_score": 1.0,
+                "_source": {
+                    "id": 14903303,
+                    "categoryId": 100377,
+                    "parentCategoryId": 5,
+                    "mobileProvince": "云南",
+                    "loginTotalAmount": 299,
+                    "lastLoginTime": 1567062815260,
+                    "createTime": 1526806626000,
+                    "advisoryStatus": "StockVisit",
+                    "remark": "",
+                    "chanceSource": "Mobile",
+                    "totalOrderAmount": 4,
+                    "totalOrderMoney": 5598.0,
+                    "lastOrderTime": 1543568134000,
+                    "lastOrderCategoryId": 5,
+                    "lastOrderCateType": 0,
+                    "lastOrderGoodType": 0,
+                    "lastOrderType": 0,
+                    "lastOrderMoney": 99.0,
+                    "lastCommunicationTime": 1563888420000,
+                    "level": "B",
+                    "mobile": "13577068825",
+                    "lastCallTime": 1563888399000,
+                    "callTotalAmount": 145,
+                    "customerId": 14737005,
+                    "spreadWay": 103,
+                    "spreadPlat": 11,
+                    "lastInGroup": 1929,
+                    "lastInGroupCateType": 0,
+                    "customerGroup": 3,
+                    "createType": 0,
+                    "transferAmount": 26,
+                    "detailConditionIds": [
+                        2141,
+                        3155,
+                        3714
+                    ],
+                    "flowSource": "55a1e131-a4eb-4bef-859d-51ec6332c03a",
+                    "lastAssignTime": 1562657003000,
+                    "lastAssignEndTime": 1564064105000,
+                    "lastBackStockTime": 1567036093542,
+                    "lastUpdateTime": 1567062815307,
+                    "lastOrderUserCateType": null,
+                    "firstAssignDate": 1526806984000,
+                    "orderList": [
+                        {
+                            "id": 4167525,
+                            "netPayTime": 1543568134000,
+                            "orderType": 0,
+                            "netPayMoney": 99.0,
+                            "goodsList": [
+                                {
+                                    "id": 55985,
+                                    "goodsName": "2019基础研习班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 1,
+                                    "money": 99.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 99.0
+                        },
+                        {
+                            "id": 3828659,
+                            "netPayTime": 1536741767000,
+                            "orderType": 0,
+                            "netPayMoney": 1500.0,
+                            "goodsList": [
+                                {
+                                    "id": 54897,
+                                    "goodsName": "963密训抢分班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100377,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 2,
+                                    "money": 7500.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 7500.0
+                        },
+                        {
+                            "id": 3563131,
+                            "netPayTime": 1531300293000,
+                            "orderType": 4,
+                            "netPayMoney": 1.0,
+                            "goodsList": [
+                                {
+                                    "id": 34407,
+                                    "goodsName": "1元预约导师追分体验——预测重考点课-三国",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 1,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 4,
+                                    "goodsLabel": 5,
+                                    "money": 1.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 0,
+                            "maxOrderMoney": 1.0
+                        },
+                        {
+                            "id": 3329585,
+                            "netPayTime": 1526961651000,
+                            "orderType": 0,
+                            "netPayMoney": 3998.0,
+                            "goodsList": [
+                                {
+                                    "id": 52099,
+                                    "goodsName": "法考改革应试班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 2,
+                                    "money": 6998.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 6998.0
+                        }
+                    ],
+                    "labels": [
+                        {
+                            "labelId": 275,
+                            "createTime": 1564037381793,
+                            "updateTime": 1564037381793,
+                            "expireTime": null
+                        },
+                        {
+                            "labelId": 273,
+                            "createTime": 1531238400848,
+                            "updateTime": 1531238400848,
+                            "expireTime": null
+                        },
+                        {
+                            "labelId": 278,
+                            "createTime": 1526918400172,
+                            "updateTime": 1526918400172,
+                            "expireTime": null
+                        }
+                    ]
+                }
+            },
+            {
+                "_index": "stock_chance",
+                "_type": "stock_chance",
+                "_id": "1195677",
+                "_score": 1.0,
+                "_source": {
+                    "id": 1195677,
+                    "categoryId": 100045,
+                    "parentCategoryId": 5,
+                    "mobileProvince": "山东",
+                    "loginTotalAmount": 99,
+                    "lastLoginTime": 1567060257908,
+                    "createTime": 1380345957000,
+                    "advisoryStatus": "StockVisit",
+                    "remark": "",
+                    "chanceSource": "Register",
+                    "totalOrderAmount": 1,
+                    "totalOrderMoney": 1380.0,
+                    "lastOrderTime": 1406091511000,
+                    "lastOrderCategoryId": 5,
+                    "lastOrderCateType": 0,
+                    "lastOrderGoodType": 0,
+                    "lastOrderType": 0,
+                    "lastOrderMoney": 1380.0,
+                    "lastCommunicationTime": 1500384239000,
+                    "level": "Z",
+                    "mobile": "18263683607",
+                    "lastCallTime": null,
+                    "callTotalAmount": null,
+                    "customerId": 1264539,
+                    "spreadWay": 101,
+                    "spreadPlat": 27,
+                    "lastInGroup": null,
+                    "lastInGroupCateType": null,
+                    "customerGroup": 3,
+                    "createType": 1,
+                    "transferAmount": 6,
+                    "detailConditionIds": [
+                        2141,
+                        3155
+                    ],
+                    "flowSource": "03e55e3f-abd7-4ead-bf58-16b9d49a0a75",
+                    "lastAssignTime": 1500174086000,
+                    "lastAssignEndTime": 1500384244000,
+                    "lastBackStockTime": 1567007275652,
+                    "lastUpdateTime": 1567060257952,
+                    "lastOrderUserCateType": null,
+                    "firstAssignDate": 1380346596000,
+                    "orderList": [
+                        {
+                            "id": 893449,
+                            "netPayTime": 1406091511000,
+                            "orderType": 0,
+                            "netPayMoney": 1380.0,
+                            "goodsList": [
+                                {
+                                    "id": 9377,
+                                    "goodsName": "至尊诚信保障班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": null,
+                                    "money": 2760.0,
+                                    "isTiedSaleGoods": 0
+                                },
+                                {
+                                    "id": 9189,
+                                    "goodsName": "2014年司法考试至尊会员冲刺密训题海班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 4,
+                                    "goodsLabel": 5,
+                                    "money": 598.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 2760.0
+                        }
+                    ],
+                    "labels": null
+                }
+            },
+            {
+                "_index": "stock_chance",
+                "_type": "stock_chance",
+                "_id": "9428573",
+                "_score": 1.0,
+                "_source": {
+                    "id": 9428573,
+                    "categoryId": 100377,
+                    "parentCategoryId": 5,
+                    "mobileProvince": "贵州",
+                    "loginTotalAmount": 750,
+                    "lastLoginTime": 1567119936936,
+                    "createTime": 1499427968000,
+                    "advisoryStatus": "StockVisit",
+                    "remark": "",
+                    "chanceSource": "LeaveMessage",
+                    "totalOrderAmount": 2,
+                    "totalOrderMoney": 1.0,
+                    "lastOrderTime": 1560950773000,
+                    "lastOrderCategoryId": null,
+                    "lastOrderCateType": null,
+                    "lastOrderGoodType": null,
+                    "lastOrderType": null,
+                    "lastOrderMoney": null,
+                    "lastCommunicationTime": 1565604328000,
+                    "level": "C",
+                    "mobile": "13885736696",
+                    "lastCallTime": 1566184101000,
+                    "callTotalAmount": 249,
+                    "customerId": 11688791,
+                    "spreadWay": 101,
+                    "spreadPlat": 27,
+                    "lastInGroup": 1929,
+                    "lastInGroupCateType": 0,
+                    "customerGroup": 4,
+                    "createType": 2,
+                    "transferAmount": 38,
+                    "detailConditionIds": [
+                        3714,
+                        4287
+                    ],
+                    "flowSource": "24a8984d-ba73-42e4-a292-e9d5f6cabbf2",
+                    "lastAssignTime": 1565598409000,
+                    "lastAssignEndTime": 1566184159000,
+                    "lastBackStockTime": 1567026438975,
+                    "lastUpdateTime": 1567119936929,
+                    "lastOrderUserCateType": null,
+                    "firstAssignDate": 1499854327000,
+                    "orderList": [
+                        {
+                            "id": 5660589,
+                            "netPayTime": 1560950773000,
+                            "orderType": 4,
+                            "netPayMoney": 1.0,
+                            "goodsList": [
+                                {
+                                    "id": 64875,
+                                    "goodsName": "【超级福利】1元预约2018民法真题（回忆版）",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 1,
+                                    "categoryChildId": 100377,
+                                    "cateType": 0,
+                                    "goodsSaleType": 4,
+                                    "goodsLabel": 5,
+                                    "money": 1.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 0,
+                            "maxOrderMoney": 1.0
+                        }
+                    ],
+                    "labels": [
+                        {
+                            "labelId": 273,
+                            "createTime": 1560950772917,
+                            "updateTime": 1560950772917,
+                            "expireTime": null
+                        },
+                        {
+                            "labelId": 275,
+                            "createTime": 1564832031158,
+                            "updateTime": 1567073317261
+                        }
+                    ]
+                }
+            },
+            {
+                "_index": "stock_chance",
+                "_type": "stock_chance",
+                "_id": "5112295",
+                "_score": 1.0,
+                "_source": {
+                    "id": 5112295,
+                    "categoryId": 100377,
+                    "parentCategoryId": 5,
+                    "mobileProvince": "辽宁",
+                    "loginTotalAmount": 221,
+                    "lastLoginTime": 1567116191517,
+                    "createTime": 1463192351000,
+                    "advisoryStatus": "StockVisit",
+                    "remark": "",
+                    "chanceSource": "Online",
+                    "totalOrderAmount": 3,
+                    "totalOrderMoney": 14999.0,
+                    "lastOrderTime": 1538376158000,
+                    "lastOrderCategoryId": 5,
+                    "lastOrderCateType": 0,
+                    "lastOrderGoodType": 0,
+                    "lastOrderType": 0,
+                    "lastOrderMoney": 199.0,
+                    "lastCommunicationTime": 1561210492000,
+                    "level": "C",
+                    "mobile": "15841871828",
+                    "lastCallTime": 1561210378000,
+                    "callTotalAmount": 21,
+                    "customerId": 9145585,
+                    "spreadWay": 101,
+                    "spreadPlat": 27,
+                    "lastInGroup": 421,
+                    "lastInGroupCateType": 0,
+                    "customerGroup": 3,
+                    "createType": 3,
+                    "transferAmount": 8,
+                    "detailConditionIds": [
+                        2141,
+                        3155,
+                        4287
+                    ],
+                    "flowSource": "03e55e3f-abd7-4ead-bf58-16b9d49a0a75",
+                    "lastAssignTime": 1559722080000,
+                    "lastAssignEndTime": 1561210495000,
+                    "lastBackStockTime": 1567017144364,
+                    "lastUpdateTime": 1567116191514,
+                    "lastOrderUserCateType": null,
+                    "firstAssignDate": 1463192351000,
+                    "orderList": [
+                        {
+                            "id": 3902339,
+                            "netPayTime": 1538376158000,
+                            "orderType": 0,
+                            "netPayMoney": 199.0,
+                            "goodsList": [
+                                {
+                                    "id": 55989,
+                                    "goodsName": "2019高端研习班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 1,
+                                    "money": 199.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 199.0
+                        },
+                        {
+                            "id": 2745151,
+                            "netPayTime": 1514725025000,
+                            "orderType": 0,
+                            "netPayMoney": 8800.0,
+                            "goodsList": [
+                                {
+                                    "id": 47999,
+                                    "goodsName": "八大导师护航班（导师于越）",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100377,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 3,
+                                    "money": 31600.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": 0,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 31600.0
+                        },
+                        {
+                            "id": 2652851,
+                            "netPayTime": 1511509939000,
+                            "orderType": 0,
+                            "netPayMoney": 6000.0,
+                            "goodsList": [
+                                {
+                                    "id": 46739,
+                                    "goodsName": "400分尊享班(豪华奖学金版)",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100377,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 2,
+                                    "money": 12998.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": 0,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 12998.0
+                        }
+                    ],
+                    "labels": [
+                        {
+                            "labelId": 275,
+                            "createTime": 1567077420911,
+                            "updateTime": 1567077420911
+                        }
+                    ]
+                }
+            },
+            {
+                "_index": "stock_chance",
+                "_type": "stock_chance",
+                "_id": "14797107",
+                "_score": 1.0,
+                "_source": {
+                    "id": 14797107,
+                    "categoryId": 100377,
+                    "parentCategoryId": 5,
+                    "mobileProvince": "江苏",
+                    "loginTotalAmount": 290,
+                    "lastLoginTime": 1567138414031,
+                    "createTime": 1526466970000,
+                    "advisoryStatus": "StockVisit",
+                    "remark": "",
+                    "chanceSource": "Mobile",
+                    "totalOrderAmount": 2,
+                    "totalOrderMoney": 3099.0,
+                    "lastOrderTime": 1545657154000,
+                    "lastOrderCategoryId": 5,
+                    "lastOrderCateType": 0,
+                    "lastOrderGoodType": 0,
+                    "lastOrderType": 0,
+                    "lastOrderMoney": 99.0,
+                    "lastCommunicationTime": 1559890629000,
+                    "level": "C",
+                    "mobile": "13912506105",
+                    "lastCallTime": 1559890533000,
+                    "callTotalAmount": 122,
+                    "customerId": 15335849,
+                    "spreadWay": 87,
+                    "spreadPlat": 11,
+                    "lastInGroup": 421,
+                    "lastInGroupCateType": 0,
+                    "customerGroup": 3,
+                    "createType": 2,
+                    "transferAmount": 16,
+                    "detailConditionIds": [
+                        2141,
+                        3155
+                    ],
+                    "flowSource": "e34cbefa-6175-4e26-8a6b-6de8987c840f",
+                    "lastAssignTime": 1558842858000,
+                    "lastAssignEndTime": 1559890641000,
+                    "lastBackStockTime": 1567035846022,
+                    "lastUpdateTime": 1567138413842,
+                    "lastOrderUserCateType": null,
+                    "firstAssignDate": 1527734263000,
+                    "orderList": [
+                        {
+                            "id": 4302553,
+                            "netPayTime": 1545657154000,
+                            "orderType": 0,
+                            "netPayMoney": 99.0,
+                            "goodsList": [
+                                {
+                                    "id": 55985,
+                                    "goodsName": "2019基础研习班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 1,
+                                    "money": 99.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 99.0
+                        },
+                        {
+                            "id": 3429321,
+                            "netPayTime": 1528785989000,
+                            "orderType": 0,
+                            "netPayMoney": 3000.0,
+                            "goodsList": [
+                                {
+                                    "id": 52099,
+                                    "goodsName": "法考改革应试班",
+                                    "categoryId": 5,
+                                    "goodsAttribute": 0,
+                                    "categoryChildId": 100045,
+                                    "cateType": 0,
+                                    "goodsSaleType": 0,
+                                    "goodsLabel": 2,
+                                    "money": 6998.0,
+                                    "isTiedSaleGoods": 0
+                                }
+                            ],
+                            "parentCategoryId": 5,
+                            "orderUserCateType": null,
+                            "hasFormal": 1,
+                            "maxOrderMoney": 6998.0
+                        }
+                    ],
+                    "labels": [
+                        {
+                            "labelId": 278,
+                            "createTime": 1528732800446,
+                            "updateTime": 1528732800446,
                             "expireTime": null
                         }
                     ]
