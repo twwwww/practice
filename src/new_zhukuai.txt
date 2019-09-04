@@ -165,7 +165,8 @@
     "groupId": {
       "terms": {
         "field": "id",
-        "size": ##Size##
+        "size": ##Size##,
+        "order":{"lastOrderTime":"asc"}
       },
       "aggs": {
         "chance": {
@@ -185,6 +186,11 @@
         "lastAssignTime": {
           "max": {
             "field": "lastAssignTime"
+          }
+        },
+        "lastOrderTime": {
+          "max": {
+            "field": "lastOrderTime"
           }
         },
         "having": {

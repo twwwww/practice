@@ -82,7 +82,6 @@
                   ]
                 }
               },
-
               {
                 "nested": {
                   "path": "orderList",
@@ -237,7 +236,7 @@
               "latestOrder": "chance.latest_order"
             },
             "script": {
-              "inline": "params.latestOrder > (1564588800000L - 1000000000000L ) * 10 && params.latestOrder < (##Date1##L - 1000000000000L ) * 10 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 != 2 && params.latestOrder % 10000 >= 0.001 * 2000"
+              "inline": "params.latestOrder > (1564588800000L - 1000000000000L ) * 10 && params.latestOrder < (##Date1##L - 1000000000000L ) * 10 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 == 1 && params.latestOrder % 10000 >= 0.001 * 2000"
             }
           }
         }

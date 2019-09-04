@@ -59,12 +59,20 @@ public class StockChanceUtil {
         List<EsHit> esHits = JSONObject.parseArray(sb.toString(), EsHit.class);
         List<String> chanceIds = esHits.stream().map(ch -> {
             StringBuilder sbMerge = new StringBuilder();
-            sbMerge.append(ch.get_source().getId()).append("==");
-            sbMerge.append(ch.get_source().getCustomerId()).append("==");
+            sbMerge.append(ch.get_source().getId()).append("=");
+            sbMerge.append(ch.get_source().getCustomerId()).append("=");
             sbMerge.append(ch.get_source()
                     .getLabels()
                     .stream()
-                    .filter(label -> label.getLabelId() == 271)
+                    .filter(label -> label.getLabelId() == 275)
+                    .findAny()
+                    .map(LabelInfo::getCreateTime)
+                    .map(time -> DateFormatUtils.format(time, "yyyy-MM-dd HH:mm:ss"))
+                    .orElse(null)).append("=");
+            sbMerge.append(ch.get_source()
+                    .getLabels()
+                    .stream()
+                    .filter(label -> label.getLabelId() == 275)
                     .findAny()
                     .map(LabelInfo::getUpdateTime)
                     .map(time -> DateFormatUtils.format(time, "yyyy-MM-dd HH:mm:ss"))
