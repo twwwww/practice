@@ -82,7 +82,12 @@
                   ]
                 }
               },
-
+String s1 = "一天";
+        String s2 = "一天又一天";
+        String s3 = "一举一动";
+        String s4 = "一举成名";
+        String s5 = "不干胶";
+        String s6 = "不知道";
               {
                 "nested": {
                   "path": "orderList",
