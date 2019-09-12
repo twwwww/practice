@@ -5,21 +5,12 @@
     "bool": {
       "filter": [
         {
-          "range": {
-            "lastCallTime": {
-              "from": null,
-              "to": ##Hour48##,
-              "include_lower": true,
-              "include_upper": true,
-              "boost": 1
-            }
-          }
-        },
-        {
-          "terms": {
-            "categoryId": [
-              ##CategoryIds##
-            ]
+          "script": {
+            "script": {
+              "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -36);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
+              "lang": "painless"
+            },
+            "boost": 1
           }
         },
         {

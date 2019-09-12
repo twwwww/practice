@@ -22,7 +22,7 @@ public class FSTTest {
                 builder.add(Util.toIntsRef(scratchBytes, intsRefBuilder), outputValues[i]);
             }
             FST<Long> fst = builder.finish();
-            Long value = Util.get(fst, new BytesRef("cat"));
+            Long value = Util.get(fst, new BytesRef("seek"));
             System.out.println(value);
         } catch (Exception e) {
             e.printStackTrace();
