@@ -1,6 +1,7 @@
 package com.tww.test.arithmetic.dp.by;
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class ByTest5 {
     /**
@@ -9,22 +10,42 @@ public class ByTest5 {
      *
      * 对num[i]排序
      * j:上次取值下标，k本次取的下标          (0 <= j,k <= i)
-     * dp(j) = num[k] - Min(dp(k))  (num[j] + a <= num[k] <= num[j] + b)
+     * dp(j) =Min( num[k] - dp(k))  (num[j] + a <= num[k] <= num[j] + b)
      * Base Case:
      * dp(i) = num[i]
+     * dp(0) 时 (num[j] + a <= num[k] <= num[j] + b)  num(j) = 0;
      *
      */
     public static void main(String[] args) {
-        int [] nums = new int[]{0,1,3,-2,5,-3,6};  //第一位加入0占位
+        int [] nums = new int[]{1,3,-2,5,-3,6};
         int max = 2;
         int min = 1;
-        Arrays.sort(nums);
-        int[] dp =  new int[nums.length + 1];
-        dp[nums.length] = nums[nums.length - 1];
-        for (int i = nums.length; i >= 0; i--) {
-            dp[i] = nums[i - 1] - ;
-            int minNum = Integer.MAX_VALUE;
-
+        nums = Arrays.stream(nums).filter(i -> i >= min).sorted().toArray();
+        int[] dp =  new int[nums.length - 1];
+        dp[nums.length - 2] = nums[nums.length - 1];
+        for (int i = nums.length - 3; i >= 0; i--) {
+            int maxNum = Integer.MIN_VALUE;
+            int minIndex = nums.length;
+            int maxIndex = -1;
+            for (int m = i + 1; m < nums.length; m++) {
+                if (nums[m] >= min + (i == 0 ? 0 : nums[i])) {
+                    minIndex = m;
+                    break;
+                }
+            }
+            for (int m = nums.length - 1; m > i; m--) {
+                if (nums[m] <= max + (i == 0 ? 0 : nums[i])) {
+                    maxIndex = m;
+                    break;
+                }
+            }
+            if (minIndex <= maxIndex) {
+                for (int j = minIndex; j <= maxIndex ; j++) {
+                    maxNum = Integer.max(maxNum, nums[j] - dp[j]);
+                }
+            }
+            dp[i] =  maxNum;
         }
+        System.out.println(dp[0]);
     }
 }
