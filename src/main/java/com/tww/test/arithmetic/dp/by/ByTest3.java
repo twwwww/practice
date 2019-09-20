@@ -20,7 +20,7 @@ public class ByTest3 {
      */
     public static void main(String[] args) {
         int[] choose = new int[]{1,3,2};
-        int coin = 10;
+        int coin = 12;
         boolean[] dp = new boolean[coin + 1];
         dp[0] = false;
         dp[1] = true;

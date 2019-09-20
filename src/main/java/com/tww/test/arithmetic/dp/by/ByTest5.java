@@ -21,20 +21,20 @@ public class ByTest5 {
         int max = 2;
         int min = 1;
         nums = Arrays.stream(nums).filter(i -> i >= min).sorted().toArray();
-        int[] dp =  new int[nums.length - 1];
-        dp[nums.length - 2] = nums[nums.length - 1];
-        for (int i = nums.length - 3; i >= 0; i--) {
+        int[] dp =  new int[nums.length];
+        dp[nums.length - 1] = nums[nums.length - 1];
+        for (int i = nums.length - 2; i >= 0; i--) {
             int maxNum = Integer.MIN_VALUE;
             int minIndex = nums.length;
             int maxIndex = -1;
-            for (int m = i + 1; m < nums.length; m++) {
-                if (nums[m] >= min + (i == 0 ? 0 : nums[i])) {
+            for (int m = i; m < nums.length; m++) {
+                if (nums[m] >= min + (i == 0 ? 0 : nums[i - 1])) {
                     minIndex = m;
                     break;
                 }
             }
-            for (int m = nums.length - 1; m > i; m--) {
-                if (nums[m] <= max + (i == 0 ? 0 : nums[i])) {
+            for (int m = nums.length - 1; m > i - 1; m--) {
+                if (nums[m] <= max + (i == 0 ? 0 : nums[i - 1])) {
                     maxIndex = m;
                     break;
                 }
