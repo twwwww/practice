@@ -102,68 +102,11 @@
                                           }
                                         },
                                         {
-                                          "terms": {
-                                            "orderList.goodsList.goodsLabel": [
-                                              3,
-                                              4,
-                                              8
-                                            ]
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "bool": {
-                            "must": [
-                              {
-                                "term": {
-                                  "orderList.orderType": 0
-                                }
-                              },
-                              {
-                                "term": {
-                                  "orderList.parentCategoryId": 9
-                                }
-                              },
-                              {
-                                "range": {
-                                  "orderList.netPayTime": {
-                                    "from": 1504195200000,
-                                    "to": 1535731199000,
-                                    "include_lower": true,
-                                    "include_upper": true,
-                                    "boost": 1
-                                  }
-                                }
-                              },
-                              {
-                                "nested": {
-                                  "path": "orderList.goodsList",
-                                  "query": {
-                                    "bool": {
-                                      "must": [
-                                        {
-                                          "term": {
-                                            "orderList.goodsList.goodsAttribute": 0
-                                          }
-                                        },
-                                        {
                                           "bool": {
                                             "should": [
                                               {
                                                 "wildcard": {
                                                   "orderList.goodsList.goodsName": "*测试商品*"
-                                                }
-                                              },
-                                              {
-                                                "wildcard": {
-                                                  "orderList.goodsList.goodsName": "*皇家*"
                                                 }
                                               }
                                             ]
@@ -221,7 +164,7 @@
               "latestOrder": "chance.latest_order"
             },
             "script": {
-              "inline": "params.latestOrder> 1472659200000L && params.latestOrder < 1535731199000L && params.latestOrder % 10000 > 0.001 * 50"
+              "inline": "params.latestOrder> 1504195200000L && params.latestOrder < 1535731199000L && params.latestOrder % 10000 > 0.001 * 50"
             }
           }
         }
