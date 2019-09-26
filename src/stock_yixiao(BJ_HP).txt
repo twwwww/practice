@@ -7,7 +7,7 @@
         {
           "script": {
             "script": {
-              "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -36);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
+              "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -24);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
               "lang": "painless"
             },
             "boost": 1

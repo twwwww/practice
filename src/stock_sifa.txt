@@ -16,13 +16,6 @@
           }
         },
         {
-          "terms": {
-            "categoryId": [
-              ##CategoryIds##
-            ]
-          }
-        },
-        {
           "nested": {
             "path": "orderList",
             "query": {
@@ -74,13 +67,6 @@
           "bool": {
             "should": [
               {
-                "terms": {
-                  "id": [
-                    ##DeleteChanceIds##
-                  ]
-                }
-              },
-              {
                 "nested": {
                   "path": "orderList",
                   "query": {
@@ -97,6 +83,17 @@
                               {
                                 "term": {
                                   "orderList.parentCategoryId": 5
+                                }
+                              },
+                              {
+                                "range": {
+                                  "orderList.netPayTime": {
+                                    "from": 1538323200000,
+                                    "to": null,
+                                    "include_lower": true,
+                                    "include_upper": true,
+                                    "boost": 1
+                                  }
                                 }
                               },
                               {
@@ -230,7 +227,7 @@
               "latestOrder": "chance.latest_order"
             },
             "script": {
-              "inline": "params.latestOrder>= 1501516800000L && params.latestOrder <= 1533139199000L && params.latestOrder % 10000 >= 0.001 * 200 && params.latestOrder % 10000 <= 0.01 * 10000"
+              "inline": "params.latestOrder>= 1530374400000L && params.latestOrder <= 1561910399000L && params.latestOrder % 10000 >= 0.001 * 200 && params.latestOrder % 10000 <= 0.01 * 10000"
             }
           }
         }

@@ -8,18 +8,11 @@
           "range": {
             "lastCallTime": {
               "from": null,
-              "to": ##Hour48##,
+              "to": ##Date1##,
               "include_lower": true,
               "include_upper": true,
               "boost": 1
             }
-          }
-        },
-        {
-          "terms": {
-            "categoryId": [
-              ##CategoryIds##
-            ]
           }
         },
         {

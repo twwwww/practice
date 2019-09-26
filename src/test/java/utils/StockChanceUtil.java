@@ -23,7 +23,7 @@ public class StockChanceUtil {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        parseJsonStr();
+        parseAggsJsonStr();
     }
 
     private static void parseJsonStr() throws Exception {

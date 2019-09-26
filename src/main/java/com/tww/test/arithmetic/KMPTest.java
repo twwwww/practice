@@ -1,4 +1,4 @@
-package com.tww.test.arithmetic;
+/*package com.tww.test.arithmetic;
 
 public class KMPTest {
 
@@ -6,9 +6,9 @@ public class KMPTest {
 
     }
 
-    /**
+    *//**
      * Base Case : dp[0][pattern.chartAt(0)] = 1
-     */
+     *//*
     static class KMP {
         private String pattern;
         private int[][] dp;
@@ -33,4 +33,4 @@ public class KMPTest {
             return false;
         }
     }
-}
+}*/
