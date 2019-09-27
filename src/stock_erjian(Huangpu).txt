@@ -88,47 +88,6 @@
                                           }
                                         },
                                         {
-                                          "terms": {
-                                            "orderList.goodsList.goodsLabel": [
-                                              3,
-                                              4,
-                                              8
-                                            ]
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "bool": {
-                            "must": [
-                              {
-                                "term": {
-                                  "orderList.orderType": 0
-                                }
-                              },
-                              {
-                                "term": {
-                                  "orderList.parentCategoryId": 16
-                                }
-                              },
-                              {
-                                "nested": {
-                                  "path": "orderList.goodsList",
-                                  "query": {
-                                    "bool": {
-                                      "must": [
-                                        {
-                                          "term": {
-                                            "orderList.goodsList.goodsAttribute": 0
-                                          }
-                                        },
-                                        {
                                           "bool": {
                                             "should": [
                                               {
@@ -138,23 +97,8 @@
                                               },
                                               {
                                                 "wildcard": {
-                                                  "orderList.goodsList.goodsName": "*皇家*"
+                                                  "orderList.goodsList.goodsName": "*BIM*"
                                                 }
-                                              },
-                                              {
-                                                "wildcard": {
-                                                  "orderList.goodsList.goodsName": "*铂金*"
-                                                }
-                                              },
-                                              {
-                                               "wildcard": {
-                                                 "orderList.goodsList.goodsName": "*白金*"
-                                               }
-                                              },
-                                              {
-                                               "wildcard": {
-                                                 "orderList.goodsList.goodsName": "*天成*"
-                                               }
                                               }
                                             ]
                                           }
@@ -211,7 +155,7 @@
                 "latestOrder": "chance.latest_order"
               },
               "script": {
-                "inline": "params.latestOrder> (1527782400000L -1000000000000L) * 10 && params.latestOrder < (1559318399000L -1000000000000L) * 10 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 != 2 && params.latestOrder % 10000 >= 0.001 * 100"
+                "inline": "params.latestOrder> (1464710400000L -1000000000000L) * 10 && params.latestOrder < (1559318399000L -1000000000000L) * 10 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 != 2 && params.latestOrder % 10000 >= 0.001 * 100"
               }
             }
           }
