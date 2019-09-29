@@ -14,6 +14,10 @@ public class P1060 {
      * dp[0 - money[0]][0] = 0
      * dp[money[0] - m][0] = money[0] * ups[0]
      *
+     * time: O(mn)
+     * space: O(mn)
+     *
+     *
      * @param args
      * @throws Exception
      */

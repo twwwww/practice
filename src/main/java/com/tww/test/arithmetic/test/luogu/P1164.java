@@ -18,6 +18,9 @@ public class P1164 {
      * dp[0][ 0 - M] = (1:M = price[0] ,0:其他);
      * dp[0 - N][0] = 1;
      *
+     * time: O(n^2)
+     * space: O(n)
+     *
      * @param args
      * @throws Exception
      */
