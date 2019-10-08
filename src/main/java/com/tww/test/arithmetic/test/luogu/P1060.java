@@ -32,9 +32,9 @@ public class P1060 {
             moneys[i] = cin.nextInt();
             ups[i] = cin.nextInt();
         }
-        int[][] dp = new int[N][m];
+        int[][] dp = new int[N + 1][m];
 
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N + 1; i++) {
             for (int j = 0; j < m; j++) {
                 if (i == 0) {
                     dp[i][j] = 0;
@@ -54,6 +54,6 @@ public class P1060 {
             }
         }
 
-        System.out.println(dp[N - 1][m - 1]);
+        System.out.println(dp[N][m - 1]);
     }
 }
