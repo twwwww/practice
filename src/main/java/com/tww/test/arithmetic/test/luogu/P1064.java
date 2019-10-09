@@ -36,8 +36,8 @@ public class P1064 {
      *
      * dp[m][k][1] = -1  (m > money[k])   当前金额小于商品金额，不能选择买
      *
-     * time : O(n^3)
-     * space: O(n^2)
+     * time : O(m * n^2)
+     * space: O(m * n)
      *
      * @param args
      * @throws Exception
