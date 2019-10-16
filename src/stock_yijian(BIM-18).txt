@@ -16,6 +16,11 @@
           }
         },
         {
+          "term":  {
+            "lastOrderCategoryId":9
+          }
+        },
+        {
           "nested": {
             "path": "orderList",
             "query": {
@@ -46,11 +51,6 @@
                           "bool": {
                             "must": [
                               {
-                                "term": {
-                                  "orderList.parentCategoryId": 9
-                                }
-                              },
-                              {
                                 "nested": {
                                   "path": "orderList.goodsList",
                                   "query": {
@@ -62,6 +62,11 @@
                                               {
                                                 "wildcard": {
                                                   "orderList.goodsList.goodsName": "*测试商品*"
+                                                }
+                                              },
+                                              {
+                                                "wildcard": {
+                                                  "orderList.goodsList.goodsName": "*BIM*"
                                                 }
                                               }
                                             ]
@@ -91,7 +96,7 @@
       "terms": {
         "field": "id",
         "size": ##Size##,
-        "order":{"lastOrderTime":"asc"}
+        "order":{"lastCallTime":"asc"}
       },
       "aggs": {
         "chance": {
@@ -102,15 +107,15 @@
             "latest_order": {
               "max": {
                 "script": {
-                  "inline": "if (doc['orderList.parentCategoryId'].value == 9 && doc['orderList.netPayMoney' ].value > 1 && doc['orderList.orderType'].value == 0) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
+                  "inline": "if (doc['orderList.parentCategoryId'].value == 9) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
                 }
               }
             }
           }
         },
-        "lastOrderTime": {
+        "lastCallTime": {
           "max": {
-            "field": "lastOrderTime"
+            "field": "lastCallTime"
           }
         },
         "having": {

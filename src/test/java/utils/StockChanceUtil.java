@@ -23,7 +23,7 @@ public class StockChanceUtil {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        parseAggsJsonStr();
+        parseJsonStr2();
     }
 
     private static void parseJsonStr() throws Exception {
@@ -64,7 +64,7 @@ public class StockChanceUtil {
             sbMerge.append(ch.get_source()
                     .getLabels()
                     .stream()
-                    .filter(label -> label.getLabelId() == 275)
+                    .filter(label -> label.getLabelId() == 283)
                     .findAny()
                     .map(LabelInfo::getCreateTime)
                     .map(time -> DateFormatUtils.format(time, "yyyy-MM-dd HH:mm:ss"))
@@ -72,7 +72,7 @@ public class StockChanceUtil {
             sbMerge.append(ch.get_source()
                     .getLabels()
                     .stream()
-                    .filter(label -> label.getLabelId() == 275)
+                    .filter(label -> label.getLabelId() == 283)
                     .findAny()
                     .map(LabelInfo::getUpdateTime)
                     .map(time -> DateFormatUtils.format(time, "yyyy-MM-dd HH:mm:ss"))
