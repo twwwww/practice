@@ -212,13 +212,19 @@
             "field": "lastOrderTime"
           }
         },
+        "categoryId": {
+          "max": {
+            "field": "categoryId"
+          }
+        },
         "having": {
           "bucket_selector": {
             "buckets_path": {
-              "latestOrder": "chance.latest_order"
+              "latestOrder": "chance.latest_order",
+              "categoryId": "categoryId"
             },
             "script": {
-              "inline": "params.latestOrder> (1535731200000L -1000000000000L) * 10 && params.latestOrder < (##Date15##L -1000000000000L) * 10 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 == 2 && params.latestOrder % 10000 >= 0.001 * 198"
+              "inline": "params.latestOrder> (1535731200000L -1000000000000L) * 10 && params.latestOrder < (##Date15##L -1000000000000L) * 10 && ((params.latestOrder%100000 - params.latestOrder%10000)/10000 == 2 || params.categoryId == 100255 ) && params.latestOrder % 10000 >= 0.001 * 198"
             }
           }
         }
