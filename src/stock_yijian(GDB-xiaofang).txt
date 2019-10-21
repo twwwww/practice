@@ -63,11 +63,6 @@
                                                 "wildcard": {
                                                   "orderList.goodsList.goodsName": "*测试商品*"
                                                 }
-                                              },
-                                              {
-                                                "wildcard": {
-                                                  "orderList.goodsList.goodsName": "*BIM*"
-                                                }
                                               }
                                             ]
                                           }
@@ -124,7 +119,7 @@
               "latestOrder": "chance.latest_order"
             },
             "script": {
-              "inline": "params.latestOrder> 1541001600000L && params.latestOrder < 1567180799000L && params.latestOrder % 10000 > 0.001 * 198 && params.latestOrder % 10000 <= 0.001 * 3000"
+              "inline": "params.latestOrder> 1541001600000L && params.latestOrder < 1567180799000L && params.latestOrder % 10000 > 0.001 * 3000"
             }
           }
         }
