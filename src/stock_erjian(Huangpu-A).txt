@@ -170,7 +170,7 @@
                 "latestOrder": "chance.latest_order"
               },
               "script": {
-                "inline": "params.latestOrder> (1314806400000L -1000000000000L) * 10 && params.latestOrder < (1527782399000L -1000000000000L) * 10 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 != 2 && params.latestOrder % 10000 >= 0.001 * 100"
+                "inline": "params.latestOrder> (1527782399000L -1000000000000L) * 10 && params.latestOrder < (1559318399000L -1000000000000L) * 10 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 != 2 && params.latestOrder % 10000 >= 0.001 * 100"
               }
             }
           }
