@@ -63,6 +63,34 @@
                   "query": {
                     "bool": {
                       "should": [
+                      {
+                            "bool": {
+                              "must": [
+                                {
+                                  "nested": {
+                                    "path": "orderList.goodsList",
+                                    "query": {
+                                      "bool": {
+                                        "must": [
+                                          {
+                                            "bool": {
+                                              "should": [
+                                                {
+                                                  "wildcard": {
+                                                    "orderList.goodsList.goodsName": "*BIM*"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                      },
                         {
                           "bool": {
                             "must": [
