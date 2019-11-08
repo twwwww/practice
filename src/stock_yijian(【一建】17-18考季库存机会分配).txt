@@ -16,27 +16,6 @@
           }
         },
         {
-          "terms": {
-            "categoryId": [
-              100181,100185,100215,100267,
-              100269,100271,100273,100275,
-              100277,100279,100351,100353,
-              100373,100379,100387,100433,
-              100461,100471,100485,100495,
-              100511,100521,100529,100543,
-              100549,100597,100649,100651,
-              100663,100677,100679,100683,
-              100685,100687,100689,100691,
-              100707,100717,100733,100759,
-              100761,100769,100787,100813,
-              100863,100897,100903,100909,
-              100915,100919,100963,100975,
-              101005,101009,101011,101013,
-              101015,101017,101019
-            ]
-          }
-        },
-        {
           "nested": {
             "path": "orderList",
             "query": {
@@ -49,7 +28,7 @@
                   },
                   {
                     "term": {
-                      "orderList.parentCategoryId": 100175
+                      "orderList.parentCategoryId": 9
                     }
                   },
                   {
@@ -79,13 +58,6 @@
           "bool": {
             "should": [
               {
-                "terms": {
-                  "id": [
-                    ##DeleteChanceIds##
-                  ]
-                }
-              },
-              {
                 "nested": {
                   "path": "orderList",
                   "query": {
@@ -101,7 +73,7 @@
                               },
                               {
                                 "term": {
-                                  "orderList.parentCategoryId": 100175
+                                  "orderList.parentCategoryId": 9
                                 }
                               },
                               {
@@ -136,49 +108,14 @@
                           "bool": {
                             "must": [
                               {
-                                "term": {
-                                  "orderList.orderType": 0
-                                }
-                              },
-                              {
-                                "term": {
-                                  "orderList.parentCategoryId": 100175
-                                }
-                              },
-                              {
                                 "nested": {
                                   "path": "orderList.goodsList",
                                   "query": {
                                     "bool": {
                                       "must": [
                                         {
-                                          "term": {
-                                            "orderList.goodsList.goodsAttribute": 0
-                                          }
-                                        },
-                                        {
                                           "bool": {
                                             "should": [
-                                              {
-                                                "wildcard": {
-                                                  "orderList.goodsList.goodsName": "*双证*"
-                                                }
-                                              },
-                                              {
-                                                "wildcard": {
-                                                  "orderList.goodsList.goodsName": "*学历*"
-                                                }
-                                              },
-                                              {
-                                                "wildcard": {
-                                                  "orderList.goodsList.goodsName": "*预科*"
-                                                }
-                                              },
-                                              {
-                                                "wildcard": {
-                                                  "orderList.goodsList.goodsName": "*强哥*"
-                                                }
-                                              },
                                               {
                                                 "wildcard": {
                                                   "orderList.goodsList.goodsName": "*测试商品*"
@@ -211,7 +148,7 @@
       "terms": {
         "field": "id",
         "size": ##Size##,
-        "order":{"lastOrderTime":"asc"}
+        "order":{"lastCallTime":"asc"}
       },
       "aggs": {
         "chance": {
@@ -222,7 +159,7 @@
             "latest_order": {
               "max": {
                 "script": {
-                  "inline": "if (doc['orderList.parentCategoryId'].value == 100175 && doc['orderList.netPayMoney' ].value > 1 && doc['orderList.orderType'].value == 0) {long reduceNetPayTime = doc['orderList.netPayTime'].value - 1000000000000L;long orderUserCateType = doc['orderList.orderUserCateType'].value;double netPayMoney = doc['orderList.netPayMoney'].value;return (reduceNetPayTime - reduceNetPayTime % 10000) * 10 + orderUserCateType * 10000 + netPayMoney *0.001} else { return 0 }"
+                  "inline": "if (doc['orderList.parentCategoryId'].value == 9 && doc['orderList.netPayMoney' ].value > 1 && doc['orderList.orderType'].value == 0) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
                 }
               }
             }
@@ -233,13 +170,18 @@
             "field": "lastOrderTime"
           }
         },
+        "lastCallTime": {
+          "max": {
+            "field": "lastCallTime"
+          }
+        },
         "having": {
           "bucket_selector": {
             "buckets_path": {
               "latestOrder": "chance.latest_order"
             },
             "script": {
-              "inline": "params.latestOrder> (1535731200000L -1000000000000L) * 10 && params.latestOrder < (##Date15##L -1000000000000L) * 10 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 != 2 && params.latestOrder % 10000 >= 0.001 * 2000"
+              "inline": "params.latestOrder> 1469980800000L && params.latestOrder < 1535731200000L && params.latestOrder % 10000 > 0.001 * 100"
             }
           }
         }

@@ -193,7 +193,7 @@
       "terms": {
         "field": "id",
         "size": ##Size##,
-        "order":{"lastOrderTime":"asc"}
+        "order":{"lastCallTime":"asc"}
       },
       "aggs": {
         "chance": {
@@ -215,13 +215,18 @@
             "field": "lastOrderTime"
           }
         },
+        "lastCallTime": {
+          "max": {
+            "field": "lastCallTime"
+          }
+        },
         "having": {
           "bucket_selector": {
             "buckets_path": {
               "latestOrder": "chance.latest_order"
             },
             "script": {
-              "inline": "params.latestOrder> 1533052800000L && params.latestOrder < ##Date7##L && params.latestOrder % 10000 > 0.001 * 100"
+              "inline": "params.latestOrder> 1533052800000L && params.latestOrder < 1567267200000L && params.latestOrder % 10000 > 0.001 * 100"
             }
           }
         }
