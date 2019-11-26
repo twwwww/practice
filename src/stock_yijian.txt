@@ -29,8 +29,8 @@
               "bool": {
                 "must": [
                   {
-                    "term": {
-                      "orderList.orderType": 0
+                    "terms": {
+                      "orderList.orderType": [0,1]
                     }
                   },
                   {
@@ -81,8 +81,8 @@
                           "bool": {
                             "must": [
                               {
-                                "term": {
-                                  "orderList.orderType": 0
+                                "terms": {
+                                  "orderList.orderType": [0,1]
                                 }
                               },
                               {
@@ -122,8 +122,8 @@
                           "bool": {
                             "must": [
                               {
-                                "term": {
-                                  "orderList.orderType": 0
+                                "terms": {
+                                  "orderList.orderType": [0,1]
                                 }
                               },
                               {
@@ -204,7 +204,7 @@
             "latest_order": {
               "max": {
                 "script": {
-                  "inline": "if (doc['orderList.parentCategoryId'].value == 9 && doc['orderList.netPayMoney' ].value > 1 && doc['orderList.orderType'].value == 0) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
+                  "inline": "if (doc['orderList.parentCategoryId'].value == 9 && doc['orderList.netPayMoney' ].value > 1 && (doc['orderList.orderType'].value == 0 || doc['orderList.orderType'].value == 1)) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
                 }
               }
             }
@@ -226,7 +226,7 @@
               "latestOrder": "chance.latest_order"
             },
             "script": {
-              "inline": "params.latestOrder> 1533052800000L && params.latestOrder < 1567267200000L && params.latestOrder % 10000 > 0.001 * 100"
+              "inline": "params.latestOrder> 1501516800000L && params.latestOrder < 1567267200000L && params.latestOrder % 10000 >= 0.001 * 198"
             }
           }
         }

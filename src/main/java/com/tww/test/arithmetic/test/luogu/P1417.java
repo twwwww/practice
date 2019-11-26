@@ -19,6 +19,7 @@ public class P1417 {
      * @param args
      * @throws Exception
      */
+    // todo
     public static void main(String args[]) throws Exception {
         Scanner cin = new Scanner(System.in);
         int T = cin.nextInt(), n = cin.nextInt();
@@ -46,8 +47,17 @@ public class P1417 {
             foods.add(food);
         }
 
-        foods.sort((f1,f2) -> f1.b);
+        foods.sort((f1,f2) -> Math.toIntExact(f2.b * f1.c - f2.c * f1.b));
 
+        int[] dp = new int[T];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < T; j++) {
+                if (i == 0) {
+
+                }
+            }
+        }
 
         System.out.println();
     }

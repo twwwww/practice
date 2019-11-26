@@ -7,7 +7,7 @@
         {
           "script": {
             "script": {
-              "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -168);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
+              "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -120);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
               "lang": "painless"
             },
             "boost": 1
@@ -21,14 +21,14 @@
                 "must": [
                   {
                     "term": {
-                      "orderList.orderType": 1
+                      "orderList.orderType": 5
                     }
                   },
                   {
                     "range": {
                         "orderList.netPayTime": {
                             "from":1567267200000,
-                            "to":1571760000000
+                            "to":1570809600000
                         }
                     }
                   },
@@ -81,7 +81,7 @@
                             "must": [
                               {
                                 "term": {
-                                  "orderList.orderType": 1
+                                  "orderList.orderType": 5
                                 }
                               },
                               {
@@ -166,7 +166,7 @@
               "latest_order": {
                 "max": {
                   "script": {
-                    "inline": "if (doc['orderList.parentCategoryId'].value == 16 && doc['orderList.netPayMoney' ].value > 1 && doc['orderList.orderType'].value == 1) {long reduceNetPayTime = doc['orderList.netPayTime'].value - 1000000000000L;long orderUserCateType = doc['orderList.orderUserCateType'].value;double netPayMoney = doc['orderList.netPayMoney'].value;return (reduceNetPayTime - reduceNetPayTime % 10000) * 10 + orderUserCateType * 10000 + netPayMoney *0.001} else { return 0 }"
+                    "inline": "if (doc['orderList.parentCategoryId'].value == 16 && doc['orderList.netPayMoney' ].value > 1 && doc['orderList.orderType'].value == 5) {long reduceNetPayTime = doc['orderList.netPayTime'].value - 1000000000000L;long orderUserCateType = doc['orderList.orderUserCateType'].value;double netPayMoney = doc['orderList.netPayMoney'].value;return (reduceNetPayTime - reduceNetPayTime % 10000) * 10 + orderUserCateType * 10000 + netPayMoney *0.001} else { return 0 }"
                   }
                 }
               }
