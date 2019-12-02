@@ -2,152 +2,231 @@
   "from": 0,
   "size": 0,
   "query": {
-    "bool": {
-      "filter": [
-        {
-          "script": {
-            "script": {
-              "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -120);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
-              "lang": "painless"
-            },
-            "boost": 1
-          }
-        },
-        {
-          "nested": {
-            "path": "orderList",
-            "query": {
-              "bool": {
-                "must": [
-                  {
-                    "term": {
-                      "orderList.orderType": 5
-                    }
-                  },
-                  {
-                    "range": {
-                        "orderList.netPayTime": {
-                            "from":1567267200000,
-                            "to":1570809600000
-                        }
-                    }
-                  },
-                  {
-                      "range": {
-                          "orderList.netPayMoney": {
-                              "from":5
-                          }
-                      }
-                    },
-                  {
-                    "term": {
-                      "orderList.parentCategoryId": 16
-                    }
-                  },
-                  {
-                    "nested": {
-                      "path": "orderList.goodsList",
-                      "query": {
-                        "bool": {
-                          "must": [
-                            {
-                              "term": {
-                                "orderList.goodsList.goodsAttribute": 0
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        }
-      ],
-      "must_not": [
-        {
-          "bool": {
-            "should": [
-              {
-                "nested": {
-                  "path": "orderList",
-                  "query": {
-                    "bool": {
-                      "should": [
-                        {
-                          "bool": {
-                            "must": [
-                              {
-                                "term": {
-                                  "orderList.orderType": 5
-                                }
-                              },
-                              {
-                                "term": {
-                                  "orderList.parentCategoryId": 16
-                                }
-                              },
-                              {
-                                "nested": {
-                                  "path": "orderList.goodsList",
-                                  "query": {
-                                    "bool": {
-                                      "must": [
-                                        {
-                                          "term": {
-                                            "orderList.goodsList.goodsAttribute": 0
-                                          }
+    "bool":{
+        "should":[
+            {
+                "bool":{
+                     "filter": [
+                       {
+                         "script": {
+                           "script": {
+                             "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -120);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
+                             "lang": "painless"
+                           },
+                           "boost": 1
+                         }
+                       },
+                       {
+                         "nested": {
+                           "path": "orderList",
+                           "query": {
+                             "bool": {
+                               "must": [
+                                 {
+                                   "term": {
+                                     "orderList.orderType": 5
+                                   }
+                                 },
+                                 {
+                                      "script": {
+                                        "script": {
+                                          "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -28 * 24);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value > 1567267200000L && doc['lastCallTime'].value < latestTime",
+                                          "lang": "painless"
                                         },
-                                        {
-                                          "bool": {
-                                            "should": [
-                                              {
-                                                "wildcard": {
-                                                  "orderList.goodsList.goodsName": "*测试商品*"
-                                                }
-                                              },
-                                              {
-                                                "wildcard": {
-                                                  "orderList.goodsList.goodsName": "*天成*"
-                                                }
-                                              },
-                                              {
-                                                "wildcard": {
-                                                  "orderList.goodsList.goodsName": "*皇家*"
-                                                }
-                                              },
-                                              {
-                                                "wildcard": {
-                                                  "orderList.goodsList.goodsName": "*铂金*"
-                                                }
-                                              },
-                                              {
-                                                "wildcard": {
-                                                  "orderList.goodsList.goodsName": "*白金*"
-                                                }
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  }
+                                        "boost": 1
+                                      }
+                                    },
+                                 {
+                                     "range": {
+                                         "orderList.netPayMoney": {
+                                             "from":200
+                                         }
+                                     }
+                                   },
+                                 {
+                                   "term": {
+                                     "orderList.parentCategoryId": 16
+                                   }
+                                 },
+                                 {
+                                   "nested": {
+                                     "path": "orderList.goodsList",
+                                     "query": {
+                                       "bool": {
+                                         "must": [
+                                           {
+                                             "term": {
+                                               "orderList.goodsList.goodsAttribute": 0
+                                             }
+                                           }
+                                         ]
+                                       }
+                                     }
+                                   }
+                                 }
+                               ]
+                             }
+                           }
+                         }
+                       }
+                     ]
+                   }
+            },
+            {
+                "bool":{
+                     "filter": [
+                       {
+                         "script": {
+                           "script": {
+                             "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -72);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
+                             "lang": "painless"
+                           },
+                           "boost": 1
+                         }
+                       },
+                       {
+                         "nested": {
+                           "path": "orderList",
+                           "query": {
+                             "bool": {
+                               "must": [
+                                 {
+                                   "term": {
+                                     "orderList.orderType": 0
+                                   }
+                                 },
+                                 {
+                                   "range": {
+                                       "orderList.netPayTime": {
+                                           "from":1527782400000,
+                                           "to":1559318400000
+                                       }
+                                   }
+                                 },
+                                 {
+                                     "range": {
+                                         "orderList.netPayMoney": {
+                                             "from":100
+                                         }
+                                     }
+                                   },
+                                 {
+                                   "term": {
+                                     "orderList.parentCategoryId": 16
+                                   }
+                                 },
+                                 {
+                                   "nested": {
+                                     "path": "orderList.goodsList",
+                                     "query": {
+                                       "bool": {
+                                         "must": [
+                                           {
+                                             "term": {
+                                               "orderList.goodsList.goodsAttribute": 0
+                                             }
+                                           }
+                                         ]
+                                       }
+                                     }
+                                   }
+                                 }
+                               ]
+                             }
+                           }
+                         }
+                       }
+                     ],
+                     "must_not": [
+                       {
+                         "bool": {
+                           "should": [
+                              {
+                                "terms":{
+                                    "lastOrderUserCateType":[2]
                                 }
-                              }
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        }
-      ]
+                              },
+                             {
+                               "nested": {
+                                 "path": "orderList",
+                                 "query": {
+                                   "bool": {
+                                     "should": [
+                                       {
+                                         "bool": {
+                                           "must": [
+                                             {
+                                               "term": {
+                                                 "orderList.orderType": 0
+                                               }
+                                             },
+                                             {
+                                               "term": {
+                                                 "orderList.parentCategoryId": 16
+                                               }
+                                             },
+                                             {
+                                               "nested": {
+                                                 "path": "orderList.goodsList",
+                                                 "query": {
+                                                   "bool": {
+                                                     "must": [
+                                                       {
+                                                         "term": {
+                                                           "orderList.goodsList.goodsAttribute": 0
+                                                         }
+                                                       },
+                                                       {
+                                                         "bool": {
+                                                           "should": [
+                                                             {
+                                                               "wildcard": {
+                                                                 "orderList.goodsList.goodsName": "*测试商品*"
+                                                               }
+                                                             },
+                                                             {
+                                                               "wildcard": {
+                                                                 "orderList.goodsList.goodsName": "*天成*"
+                                                               }
+                                                             },
+                                                             {
+                                                               "wildcard": {
+                                                                 "orderList.goodsList.goodsName": "*皇家*"
+                                                               }
+                                                             },
+                                                             {
+                                                               "wildcard": {
+                                                                 "orderList.goodsList.goodsName": "*铂金*"
+                                                               }
+                                                             },
+                                                             {
+                                                               "wildcard": {
+                                                                 "orderList.goodsList.goodsName": "*白金*"
+                                                               }
+                                                             }
+                                                           ]
+                                                         }
+                                                       }
+                                                     ]
+                                                   }
+                                                 }
+                                               }
+                                             }
+                                           ]
+                                         }
+                                       }
+                                     ]
+                                   }
+                                 }
+                               }
+                             }
+                           ]
+                         }
+                       }
+                     ]
+                   }
+            }
+        ]
     }
   },
   "aggs": {
@@ -175,6 +254,11 @@
           "lastOrderTime": {
             "max": {
               "field": "lastOrderTime"
+            }
+          },
+          "lastCallTime": {
+            "max": {
+              "field": "lastCallTime"
             }
           },
           "having": {
