@@ -8,12 +8,39 @@
           "range": {
             "lastCallTime": {
               "from": null,
-              "to": ##Date1##,
+              "to": ##Hour48##,
               "include_lower": true,
               "include_upper": true,
               "boost": 1
             }
           }
+        },
+        {
+            "bool": {
+              "should": [
+                {
+                    "terms": {
+                      "categoryId": [100255,101123]
+                    }
+                  },
+                  {
+                    "nested": {
+                      "path": "orderList",
+                      "query": {
+                        "bool": {
+                          "must": [
+                            {
+                              "term": {
+                                "orderList.orderUserCateType": 2
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+              ]
+              }
         },
         {
           "nested": {
@@ -190,7 +217,7 @@
       "terms": {
         "field": "id",
         "size": ##Size##,
-        "order":{"lastOrderTime":"asc"}
+        "order":{"lastCallTime":"asc"}
       },
       "aggs": {
         "chance": {
@@ -207,9 +234,9 @@
             }
           }
         },
-        "lastOrderTime": {
+        "lastCallTime": {
           "max": {
-            "field": "lastOrderTime"
+            "field": "lastCallTime"
           }
         },
         "categoryId": {
@@ -224,7 +251,7 @@
               "categoryId": "categoryId"
             },
             "script": {
-              "inline": "params.latestOrder> (1535731200000L -1000000000000L) * 10 && params.latestOrder < (##Date15##L -1000000000000L) * 10 && ((params.latestOrder%100000 - params.latestOrder%10000)/10000 == 2 || params.categoryId == 100255 ) && params.latestOrder % 10000 >= 0.001 * 198"
+              "inline": "params.latestOrder> (1546272000000L -1000000000000L) * 10 && params.latestOrder < (##Date15##L -1000000000000L) * 10 && ((params.latestOrder%100000 - params.latestOrder%10000)/10000 == 2 || params.categoryId == 100255 ) && params.latestOrder % 10000 >= 0.001 * 198"
             }
           }
         }
