@@ -23,7 +23,7 @@ public class StockChanceUtil {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        parseJsonStr2();
+        parse12wechatJsonStr();
     }
 
     private static void parseJsonStr() throws Exception {
@@ -97,5 +97,23 @@ public class StockChanceUtil {
         List<AggsEntity> esHits = JSONObject.parseArray(sb.toString(), AggsEntity.class);
         List<String> chanceIds = esHits.stream().map(AggsEntity::getKey).collect(Collectors.toList());
         System.out.println(chanceIds);
+    }
+
+    private static void parse12wechatJsonStr() throws Exception {
+        StringBuilder sb = new StringBuilder();
+        File file = new File("src/chances.txt");
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String tempString;
+            while ((tempString = reader.readLine()) != null) {
+                if ("".equals(tempString)) {
+                    continue;
+                }
+                sb.append(tempString);
+            }
+        }
+        List<EsHit2> esHits = JSONObject.parseArray(sb.toString(), EsHit2.class);
+        List<String> wechates = esHits.stream().map(ch -> ch.get_source().getWechat()).distinct().collect(Collectors.toList());
+        wechates.forEach(wechat -> System.out.println("'" + wechat + "',"));
+//        chanceIds.forEach(System.out::println);
     }
 }
