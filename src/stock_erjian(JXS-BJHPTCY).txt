@@ -112,7 +112,7 @@
                                   {
                                        "script": {
                                          "script": {
-                                           "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -28 * 24);long latestTime =  c.getTime().getTime();doc['orderList.netPayTime'].value > 1527782400000L && doc['orderList.netPayTime'].value < latestTime",
+                                           "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -28 * 24);long latestTime =  c.getTime().getTime();doc['orderList.netPayTime'].value > 1546272000000L && doc['orderList.netPayTime'].value < latestTime",
                                            "lang": "painless"
                                          },
                                          "boost": 1
