@@ -6,7 +6,7 @@ public class ByTest4 {
     /**
      * 多组数据
      * 两人轮流操作，n轮一循环，给出总石子数和这n轮每次两人能取的石子上限（下限为1）。
-     * 取到最后一颗者输。
+     * 取到最后一颗者赢。
      * 比如
      * 3 97 8 7 6 5 4 3
      * 表示一循环有三轮，
@@ -28,8 +28,8 @@ public class ByTest4 {
      * O(n^3) O(n^2)
      */
     public static void main(String[] args) {
-        int stone = 253;
-        int[] limits = new int[]{9,7,6,5,4,3};
+        int stone = 97;
+        int[] limits = new int[]{8,7,6,5,4,3};
         boolean[][] dp = new boolean[stone + 1][limits.length];
         for (int i = 0; i < stone + 1; i++) {
             for (int j = 0; j < limits.length; j++) {

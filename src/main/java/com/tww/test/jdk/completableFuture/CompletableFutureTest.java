@@ -21,7 +21,7 @@ public class CompletableFutureTest {
     }
 
     /**
-     * thenCompose flatmap thenApply map 使用当前线程执行 Async 相对于当前线使用别的线程(ForkJoinPool)调用
+     * thenCompose flatmap thenApply map 使用当前线程执行 Async 相对于当前线使用别的线程调用
      **/
     private static void test1() {
         List<Integer> ids = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 0);

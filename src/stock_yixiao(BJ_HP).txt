@@ -7,7 +7,7 @@
         {
           "script": {
             "script": {
-              "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -36);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
+              "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -72);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
               "lang": "painless"
             },
             "boost": 1
@@ -216,7 +216,7 @@
               "latestOrder": "chance.latest_order"
             },
             "script": {
-              "inline": "params.latestOrder> (1483200000000L -1000000000000L) * 10 && params.latestOrder < (1541001599000L -1000000000000L) * 10 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 != 2 && params.latestOrder % 10000 >= 0.001 * 800"
+              "inline": "params.latestOrder> (1538323200000L -1000000000000L) * 10 && params.latestOrder < (1548950399000L -1000000000000L) * 10 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 != 2 && params.latestOrder % 10000 >= 0.001 * 800"
             }
           }
         }

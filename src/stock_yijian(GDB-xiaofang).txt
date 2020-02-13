@@ -1,0 +1,129 @@
+{
+  "from": 0,
+  "size": 0,
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "range": {
+            "lastCallTime": {
+              "from": null,
+              "to": ##Date3##,
+              "include_lower": true,
+              "include_upper": true,
+              "boost": 1
+            }
+          }
+        },
+        {
+          "term":  {
+            "lastOrderCategoryId":9
+          }
+        },
+        {
+          "nested": {
+            "path": "orderList",
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "term": {
+                      "orderList.parentCategoryId": 9
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "must_not": [
+        {
+          "bool": {
+            "should": [
+              {
+                "nested": {
+                  "path": "orderList",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "bool": {
+                            "must": [
+                              {
+                                "nested": {
+                                  "path": "orderList.goodsList",
+                                  "query": {
+                                    "bool": {
+                                      "must": [
+                                        {
+                                          "bool": {
+                                            "should": [
+                                              {
+                                                "wildcard": {
+                                                  "orderList.goodsList.goodsName": "*测试商品*"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "aggs": {
+    "groupId": {
+      "terms": {
+        "field": "id",
+        "size": ##Size##,
+        "order":{"lastCallTime":"asc"}
+      },
+      "aggs": {
+        "chance": {
+          "nested": {
+            "path": "orderList"
+          },
+          "aggs": {
+            "latest_order": {
+              "max": {
+                "script": {
+                  "inline": "if (doc['orderList.parentCategoryId'].value == 9) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
+                }
+              }
+            }
+          }
+        },
+        "lastCallTime": {
+          "max": {
+            "field": "lastCallTime"
+          }
+        },
+        "having": {
+          "bucket_selector": {
+            "buckets_path": {
+              "latestOrder": "chance.latest_order"
+            },
+            "script": {
+              "inline": "params.latestOrder> 1541001600000L && params.latestOrder < 1567180799000L && params.latestOrder % 10000 > 0.001 * 2000"
+            }
+          }
+        }
+      }
+    }
+  }
+}
