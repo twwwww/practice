@@ -43,21 +43,45 @@ public class AverageChatInterval {
 
 
         do {
-            String query = "{\n" + "    \"query\": {\n" + "        \"bool\": {\n" + "            \"must\": [\n"
-                    + "                {\n" + "                    \"range\": {\n"
-                    + "                        \"chat_time\": {\n" + "                            \"gt\": " + gtTime + "\n"
-                    + "                        }\n" + "                    }\n" + "                },\n"
-                    + "                {\n" + "                    \"script\": {\n"
-                    + "                        \"script\": {\n"
-                    + "                            \"inline\": \"long second = doc['chat_time'].value%(24 * 60 * 60 * 1000);second >= 1 * 60 * 60 * 1000 && second <= 13.5 * 60 * 60 * 1000\",\n"
-                    + "                            \"lang\": \"painless\"\n" + "                        },\n"
-                    + "                        \"boost\": 1\n" + "                    }\n" + "                }\n"
-                    + "            ],\n" + "            \"must_not\": [\n" + "                {\n"
-                    + "                    \"term\": {\n" + "                        \"is_group_chat\": 1\n"
-                    + "                    }\n" + "                }\n" + "            ],\n"
-                    + "            \"should\": []\n" + "        }\n" + "    },\n" + "    \"from\": 0,\n"
-                    + "    \"size\": 10000,\n" + "    \"sort\": [\n" + "        {\n"
-                    + "            \"chat_time\": \"asc\"\n" + "        }\n" + "    ],\n" + "    \"aggs\": {}\n" + "}";
+            String query = "{\n" +
+                    "    \"query\": {\n" +
+                    "        \"bool\": {\n" +
+                    "            \"must\": [\n" +
+                    "                {\n" +
+                    "                    \"range\": {\n" +
+                    "                        \"chat_time\": {\n" +
+                    "                            \"gt\": 1581616800000,\n" +
+                    "                            \"lt\": 1581629400000\n" +
+                    "                        }\n" +
+                    "                    }\n" +
+                    "                },\n" +
+                    "                {\n" +
+                    "                    \"range\": {\n" +
+                    "                        \"chat_time\": {\n" +
+                    "                            \"gt\": " + gtTime + "\n" +
+                    "                        }\n" +
+                    "                    }\n" +
+                    "                }\n" +
+                    "            ],\n" +
+                    "            \"must_not\": [\n" +
+                    "                {\n" +
+                    "                    \"term\": {\n" +
+                    "                        \"is_group_chat\": 1\n" +
+                    "                    }\n" +
+                    "                }\n" +
+                    "            ],\n" +
+                    "            \"should\": []\n" +
+                    "        }\n" +
+                    "    },\n" +
+                    "    \"from\": 0,\n" +
+                    "    \"size\": 10000,\n" +
+                    "    \"sort\": [\n" +
+                    "        {\n" +
+                    "            \"chat_time\": \"asc\"\n" +
+                    "        }\n" +
+                    "    ],\n" +
+                    "    \"aggs\": {}\n" +
+                    "}";
 
             Response response = Dsl.asyncHttpClient()
                     .prepareGet(url)
