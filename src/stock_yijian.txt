@@ -226,7 +226,7 @@
               "latestOrder": "chance.latest_order"
             },
             "script": {
-              "inline": "params.latestOrder> 1559318400000L && params.latestOrder < 1568563200000L && params.latestOrder % 10000 >= 0.001 * 198"
+              "inline": "params.latestOrder> 1559318400000L && params.latestOrder < 1890748800000L && params.latestOrder % 10000 >= 0.001 * 198"
             }
           }
         }
