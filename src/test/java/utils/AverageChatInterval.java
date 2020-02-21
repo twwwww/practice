@@ -76,8 +76,8 @@ public class AverageChatInterval {
                     "                {\n" +
                     "                    \"range\": {\n" +
                     "                        \"chat_time\": {\n" +
-                    "                            \"gt\": 1581584400000,\n" +
-                    "                            \"lt\": 1581595200000\n" +
+                    "                            \"gt\": 1582221600000,\n" +
+                    "                            \"lt\": 1582234200000\n" +
                     "                        }\n" +
                     "                    }\n" +
                     "                },\n" +
@@ -109,13 +109,25 @@ public class AverageChatInterval {
                     "    \"aggs\": {}\n" +
                     "}";
 
-            Response response = Dsl.asyncHttpClient()
-                    .prepareGet(url)
-                    .addHeader("contentType", "application/json")
-                    .addHeader("Authorization", "Basic " + buildAuthHeaderInfo())
-                    .setBody(query)
-                    .execute()
-                    .get();
+            Response response = null;
+
+            do {
+                try {
+                    response = Dsl.asyncHttpClient()
+                            .prepareGet(url)
+                            .addHeader("contentType", "application/json")
+                            .addHeader("Authorization", "Basic " + buildAuthHeaderInfo())
+                            .setBody(query)
+                            .execute()
+                            .get();
+                }catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("====retry====");
+                }
+
+            }
+            while (response == null);
+
             if (response.getStatusCode() != 200) {
                 return null;
             }

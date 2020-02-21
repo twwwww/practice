@@ -5,14 +5,12 @@
     "bool": {
       "filter": [
         {
-          "range": {
-            "lastCallTime": {
-              "from": null,
-              "to": ##Date3##,
-              "include_lower": true,
-              "include_upper": true,
-              "boost": 1
-            }
+          "script": {
+            "script": {
+              "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -18);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
+              "lang": "painless"
+            },
+            "boost": 1
           }
         },
         {
@@ -197,7 +195,7 @@
             "latest_order": {
               "max": {
                 "script": {
-                  "inline": "if (doc['orderList.parentCategoryId'].value == 9 && doc['orderList.netPayMoney' ].value > 1 && (doc['orderList.orderType'].value == 0 || doc['orderList.orderType'].value == 1) && doc['orderList.orderUserCateType'].value != 8) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
+                  "inline": "if (doc['orderList.parentCategoryId'].value == 9 && doc['orderList.netPayMoney' ].value > 1 && (doc['orderList.orderType'].value == 0 || doc['orderList.orderType'].value == 1) && doc['orderList.orderUserCateType'].value == 8) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
                 }
               }
             }
@@ -219,7 +217,7 @@
               "latestOrder": "chance.latest_order"
             },
             "script": {
-              "inline": "params.latestOrder> 1559318400000L && params.latestOrder < 1575129600000L && params.latestOrder % 10000 >= 0.001 * 198"
+              "inline": "params.latestOrder> 1546272000000L && params.latestOrder < 1577808000000L && params.latestOrder % 10000 > 0.001 * 100"
             }
           }
         }
