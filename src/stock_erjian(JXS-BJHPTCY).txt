@@ -7,6 +7,13 @@
             {
                 "bool":{
                      "filter": [
+                                 {
+                                   "terms": {
+                                     "categoryId": [
+                                       ##CategoryIds##
+                                     ]
+                                   }
+                                 },
                        {
                          "script": {
                            "script": {
@@ -33,20 +40,12 @@
                                             {
                                               "script": {
                                                 "script": {
-                                                  "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -28 * 24);long latestTime =  c.getTime().getTime();doc['orderList.netPayTime'].value > 1567267200000L && doc['orderList.netPayTime'].value < latestTime",
+                                                  "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -28 * 24);long latestTime =  c.getTime().getTime();doc['orderList.netPayTime'].value > 1559318400000L && doc['orderList.netPayTime'].value < latestTime",
                                                   "lang": "painless"
                                                 },
                                                 "boost": 1
                                               }
-                                            },
-                                             {
-                                               "range": {
-                                                   "orderList.netPayTime": {
-                                                       "from":1559318400000,
-                                                       "to":1564588800000
-                                                   }
-                                               }
-                                             }
+                                            }
                                         ]
                                     }
                                  },
@@ -89,6 +88,13 @@
             {
                 "bool":{
                      "filter": [
+                                 {
+                                   "terms": {
+                                     "categoryId": [
+                                       ##CategoryIds##
+                                     ]
+                                   }
+                                 },
                        {
                          "script": {
                            "script": {
@@ -112,7 +118,7 @@
                                   {
                                        "script": {
                                          "script": {
-                                           "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -28 * 24);long latestTime =  c.getTime().getTime();doc['orderList.netPayTime'].value > 1546272000000L && doc['orderList.netPayTime'].value < latestTime",
+                                           "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -28 * 24);long latestTime =  c.getTime().getTime();doc['orderList.netPayTime'].value > 1548950400000L && doc['orderList.netPayTime'].value < latestTime",
                                            "lang": "painless"
                                          },
                                          "boost": 1
@@ -158,7 +164,7 @@
                            "should": [
                               {
                                 "terms":{
-                                    "lastOrderUserCateType":[2]
+                                    "lastOrderUserCateType":[2,8]
                                 }
                               },
                              {

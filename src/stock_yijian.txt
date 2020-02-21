@@ -5,6 +5,13 @@
     "bool": {
       "filter": [
         {
+          "terms": {
+            "categoryId": [
+              ##CategoryIds##
+            ]
+          }
+        },
+        {
           "range": {
             "lastCallTime": {
               "from": null,

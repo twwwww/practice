@@ -5,6 +5,13 @@
     "bool": {
       "filter": [
         {
+          "terms": {
+            "categoryId": [
+              ##CategoryIds##
+            ]
+          }
+        },
+        {
           "script": {
             "script": {
               "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -18);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
