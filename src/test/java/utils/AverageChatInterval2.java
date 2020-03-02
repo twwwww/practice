@@ -1,15 +1,5 @@
 package utils;
 
-import com.alibaba.fastjson.JSONObject;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.collections.CollectionUtils;
-import org.asynchttpclient.Dsl;
-import org.asynchttpclient.Response;
-import utils.entity.HujingChatRecord;
-import utils.entity.HujingChatRecordHit;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -18,9 +8,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public class AverageChatInterval {
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.collections.CollectionUtils;
+import org.asynchttpclient.Dsl;
+import org.asynchttpclient.Response;
 
-    private static final String url = "http://es-query.h.highso.com.cn:9202/hujing_chat_record_index_202002/_search";
+import com.alibaba.fastjson.JSONObject;
+import com.google.common.collect.Maps;
+
+import utils.entity.HujingChatRecordHit;
+
+public class AverageChatInterval2 {
+
+    private static final String url = "http://es-query.h.highso.com.cn:9202/hujing_chat_record_index_202003/_search";
 
     private static Map<String, Long> mapper = Maps.newHashMap();
 
@@ -37,22 +37,21 @@ public class AverageChatInterval {
     @SuppressWarnings("checkstyle:SeparatorWrap")
     private static List countGroupByLabelAndCategory() throws Exception {
 
-        Map<Long,CountTime> averageMapper = Maps.newHashMap();
+        Map<String,CountTime> averageMapper = Maps.newHashMap();
         Map<String,Long> wechatMapper = Maps.newHashMap();
 
         Map<String,Long> timeMapper = Maps.newHashMap();
 
-        File file = new File("src/wechatUser.txt");
+        File file = new File("src/wechatUser2.txt");
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String tempString;
             while ((tempString = reader.readLine()) != null) {
                 String[] split = tempString.replace(" ", "").replace("\t","").split(",");
                 CountTime countTime = new CountTime();
-                countTime.name   = split[7] + "\t" + split[5] + "\t" + split[3];
-                countTime.id = Long.valueOf(split[2]);
+                countTime.name   = split[3] + "\t" + split[0] + "\t" + split[1] + "\t" + split[2];
                 countTime.count = 0;
                 countTime.time = 0;
-                averageMapper.put(countTime.id,countTime);
+                averageMapper.put(split[2],countTime);
                 wechatMapper.put(split[1],countTime.id);
             }
         }
@@ -76,8 +75,8 @@ public class AverageChatInterval {
                     "                {\n" +
                     "                    \"range\": {\n" +
                     "                        \"chat_time\": {\n" +
-                    "                            \"gt\": 1582983000000,\n" +
-                    "                            \"lt\": 1583001000000\n" +
+                    "                            \"gt\": 1583053200000,\n" +
+                    "                            \"lt\": 1583087400000\n" +
                     "                        }\n" +
                     "                    }\n" +
                     "                },\n" +
@@ -111,6 +110,8 @@ public class AverageChatInterval {
 
             Response response = null;
 
+            int matchCount = 0;
+
             do {
                 try {
                     response = Dsl.asyncHttpClient()
@@ -141,31 +142,16 @@ public class AverageChatInterval {
             }
             gtTime = list.get(list.size() - 1).get_source().getChat_time().getTime() + 8 * 60 * 60 * 1000;
             for (HujingChatRecordHit hit : list) {
-                HujingChatRecord chat = hit.get_source();
-                String chatStr = chat.getUser_wechat() + "%==%" + chat.getWechat();
-                if (chat.getSend_type() == 2) {
-                    timeMapper.putIfAbsent(chatStr, chat.getChat_time().getTime());
-                } else {
-                    //Long time = mapper.get(chatStr);
-                    Long time = timeMapper.get(chatStr);
-                    if (Objects.nonNull(time)) {
-                        //mapper.remove(chatStr);
-                        timeMapper.remove(chatStr);
-                        long interval = (chat.getChat_time().getTime() - time) / 1000;
-                        if (interval < 0) {
-                            System.out.println("---==" + chatStr);
-                            System.out.println("---" + chat.getId());
-                        }
-                        if (interval <= 12.5 * 60 * 60) {
-                            CountTime countTime = averageMapper.get(wechatMapper.get(chat.getUser_wechat()));
-                            if (countTime != null) {
-                                countTime.count++;
-                                countTime.time += interval;
-                            }
-                            //talkCount++;
-                            //chatIntervalTime += interval;
-                        }
+                CountTime countTime = averageMapper.get(hit.get_source().getWechat());
+                if (Objects.nonNull(countTime)) {
+                    matchCount++;
+                    if (hit.get_source().getSend_type() == 2) {
+                        countTime.count2 ++ ;
+                    } else {
+                        countTime.count ++ ;
                     }
+                } else {
+                    System.out.println(hit.get_source().getWechat());
                 }
             }
             loopCount++;
@@ -181,9 +167,8 @@ public class AverageChatInterval {
         //System.out.println("averageChatInterval = " + chatIntervalTime / talkCount);
 
         averageMapper.values().forEach(mapper -> {
-            if (mapper.time > 0 && mapper.count > 0) {
-                System.out.println(mapper.name + " : " + mapper.time / mapper.count);
-            }
+                System.out.println(mapper.name + "\t" + mapper.count  + "\t"  +  mapper.count2);
+
         });
 
         return result;
@@ -199,6 +184,7 @@ public class AverageChatInterval {
 
     private static class CountTime {
         long count;
+        long count2;
         long time;
         Long id;
         String name;
