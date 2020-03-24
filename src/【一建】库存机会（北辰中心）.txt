@@ -1,0 +1,236 @@
+{
+  "from": 0,
+  "size": 0,
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "terms": {
+            "categoryId": [
+              ##CategoryIds##
+            ]
+          }
+        },
+        {
+          "range": {
+            "lastCallTime": {
+              "from": null,
+              "to": ##Date3##,
+              "include_lower": true,
+              "include_upper": true,
+              "boost": 1
+            }
+          }
+        },
+        {
+          "nested": {
+            "path": "orderList",
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "terms": {
+                      "orderList.orderType": [0,1]
+                    }
+                  },
+                  {
+                    "term": {
+                      "orderList.parentCategoryId": 9
+                    }
+                  },
+                  {
+                    "nested": {
+                      "path": "orderList.goodsList",
+                      "query": {
+                        "bool": {
+                          "must": [
+                            {
+                              "term": {
+                                "orderList.goodsList.goodsAttribute": 0
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "must_not": [
+        {
+          "bool": {
+            "should": [
+              {
+                "terms": {
+                  "id": [
+                    ##DeleteChanceIds##
+                  ]
+                }
+              },
+              {
+                "nested": {
+                  "path": "orderList",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "bool": {
+                            "must": [
+                              {
+                                "terms": {
+                                  "orderList.orderType": [0,1]
+                                }
+                              },
+                              {
+                                "term": {
+                                  "orderList.parentCategoryId": 9
+                                }
+                              },
+                              {
+                                "nested": {
+                                  "path": "orderList.goodsList",
+                                  "query": {
+                                    "bool": {
+                                      "must": [
+                                        {
+                                          "term": {
+                                            "orderList.goodsList.goodsAttribute": 0
+                                          }
+                                        },
+                                        {
+                                          "terms": {
+                                            "orderList.goodsList.goodsLabel": [
+                                              3,
+                                              4,
+                                              8
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "bool": {
+                            "must": [
+                              {
+                                "terms": {
+                                  "orderList.orderType": [0,1]
+                                }
+                              },
+                              {
+                                "term": {
+                                  "orderList.parentCategoryId": 9
+                                }
+                              },
+                              {
+                                "range": {
+                                  "orderList.netPayTime": {
+                                    "from": 1535731200000,
+                                    "to": null,
+                                    "include_lower": true,
+                                    "include_upper": true,
+                                    "boost": 1
+                                  }
+                                }
+                              },
+                              {
+                                "nested": {
+                                  "path": "orderList.goodsList",
+                                  "query": {
+                                    "bool": {
+                                      "must": [
+                                        {
+                                          "term": {
+                                            "orderList.goodsList.goodsAttribute": 0
+                                          }
+                                        },
+                                        {
+                                          "bool": {
+                                            "should": [
+                                              {
+                                                "wildcard": {
+                                                  "orderList.goodsList.goodsName": "*测试商品*"
+                                                }
+                                              },
+                                              {
+                                                "wildcard": {
+                                                  "orderList.goodsList.goodsName": "*皇家*"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "aggs": {
+    "groupId": {
+      "terms": {
+        "field": "id",
+        "size": ##Size##,
+        "order":{"lastCallTime":"asc"}
+      },
+      "aggs": {
+        "chance": {
+          "nested": {
+            "path": "orderList"
+          },
+          "aggs": {
+            "latest_order": {
+              "max": {
+                "script": {
+                  "inline": "if (doc['orderList.parentCategoryId'].value == 9 && doc['orderList.netPayMoney' ].value > 1 && (doc['orderList.orderType'].value == 0 || doc['orderList.orderType'].value == 1) && doc['orderList.orderUserCateType'].value != 8) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
+                }
+              }
+            }
+          }
+        },
+        "lastOrderTime": {
+          "max": {
+            "field": "lastOrderTime"
+          }
+        },
+        "lastCallTime": {
+          "max": {
+            "field": "lastCallTime"
+          }
+        },
+        "having": {
+          "bucket_selector": {
+            "buckets_path": {
+              "latestOrder": "chance.latest_order"
+            },
+            "script": {
+              "inline": "params.latestOrder> 1551369600000L && params.latestOrder < 1575129600000L && params.latestOrder % 10000 >= 0.001 * 198"
+            }
+          }
+        }
+      }
+    }
+  }
+}

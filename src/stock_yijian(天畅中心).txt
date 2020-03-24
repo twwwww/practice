@@ -82,7 +82,7 @@
                             "must": [
                               {
                                 "terms": {
-                                  "orderList.orderType": [0,1]
+                                  "orderList.orderType": [0]
                                 }
                               },
                               {
@@ -123,7 +123,7 @@
                             "must": [
                               {
                                 "terms": {
-                                  "orderList.orderType": [0,1]
+                                  "orderList.orderType": [0]
                                 }
                               },
                               {
@@ -204,7 +204,7 @@
             "latest_order": {
               "max": {
                 "script": {
-                  "inline": "if (doc['orderList.parentCategoryId'].value == 9 && doc['orderList.netPayMoney' ].value > 1 && (doc['orderList.orderType'].value == 0 || doc['orderList.orderType'].value == 1) && doc['orderList.orderUserCateType'].value != 8) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
+                  "inline": "if (doc['orderList.parentCategoryId'].value == 9 && doc['orderList.netPayMoney' ].value > 1 && (doc['orderList.orderType'].value == 0) && doc['orderList.orderUserCateType'].value != 8) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
                 }
               }
             }
@@ -226,7 +226,7 @@
               "latestOrder": "chance.latest_order"
             },
             "script": {
-              "inline": "params.latestOrder> 1559318400000L && params.latestOrder < 1575129600000L && params.latestOrder % 10000 >= 0.001 * 198"
+              "inline": "params.latestOrder> 1538323200000L && params.latestOrder < 1575129600000L && params.latestOrder % 10000 >= 0.001 * 198"
             }
           }
         }
