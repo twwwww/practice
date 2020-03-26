@@ -40,7 +40,7 @@
                                             {
                                               "script": {
                                                 "script": {
-                                                  "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -28 * 24);long latestTime =  c.getTime().getTime();doc['orderList.netPayTime'].value > 1559318400000L && doc['orderList.netPayTime'].value < latestTime",
+                                                  "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -28 * 24);long latestTime =  c.getTime().getTime();doc['orderList.netPayTime'].value > 1575129600000L && doc['orderList.netPayTime'].value < latestTime",
                                                   "lang": "painless"
                                                 },
                                                 "boost": 1
@@ -52,7 +52,7 @@
                                  {
                                      "range": {
                                          "orderList.netPayMoney": {
-                                             "from":200
+                                             "from":398
                                          }
                                      }
                                    },
@@ -118,7 +118,7 @@
                                   {
                                        "script": {
                                          "script": {
-                                           "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -28 * 24);long latestTime =  c.getTime().getTime();doc['orderList.netPayTime'].value > 1548950400000L && doc['orderList.netPayTime'].value < latestTime",
+                                           "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -28 * 24);long latestTime =  c.getTime().getTime();doc['orderList.netPayTime'].value > 1551369600000L && doc['orderList.netPayTime'].value < latestTime",
                                            "lang": "painless"
                                          },
                                          "boost": 1
