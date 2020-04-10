@@ -99,7 +99,27 @@
                                                 "wildcard": {
                                                   "orderList.goodsList.goodsName": "*测试商品*"
                                                 }
-                                              }
+                                              },
+                                              {
+                                                  "wildcard": {
+                                                    "orderList.goodsList.goodsName": "*天成*"
+                                                  }
+                                                },
+                                                {
+                                                  "wildcard": {
+                                                    "orderList.goodsList.goodsName": "*皇家*"
+                                                  }
+                                                },
+                                                {
+                                                  "wildcard": {
+                                                    "orderList.goodsList.goodsName": "*铂金*"
+                                                  }
+                                                },
+                                                {
+                                                  "wildcard": {
+                                                    "orderList.goodsList.goodsName": "*白金*"
+                                                  }
+                                                }
                                             ]
                                           }
                                         }
@@ -161,7 +181,7 @@
                 "lastCallTime":"lastCallTime"
               },
               "script": {
-                "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -96);long latestTime =  c.getTime().getTime();Calendar c1 = Calendar.getInstance();c1.setTime(new Date());c1.add(11, -21 * 24);long latestTime1 =  c1.getTime().getTime();boolean flag = params.latestOrder> (1577808000000L -1000000000000L) * 10 && params.latestOrder < (latestTime1 -1000000000000L) * 10 && params.latestOrder % 10000 >= 0.001 * 15 && params.latestOrder % 10000 < 0.001 * 100;if(!flag && params.lastCallTime < latestTime){flag = ((params.latestOrder> (1559318400000L -1000000000000L) * 10 && params.latestOrder < (1577808000000L -1000000000000L) * 10)) && params.latestOrder % 10000 >= 0.001 * 15 && params.latestOrder % 10000 < 0.001 * 390} return flag"
+                "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -96);long latestTime =  c.getTime().getTime();Calendar c3 = Calendar.getInstance();c3.setTime(new Date());c3.add(11, -21 * 24);long latestTime3 =  c3.getTime().getTime();Calendar c4 = Calendar.getInstance();c4.setTime(new Date());c4.add(11, -28 * 24);long latestTime4 =  c4.getTime().getTime();boolean flag = (params.latestOrder> (1577808000000L -1000000000000L) * 10 && params.latestOrder < (latestTime3 -1000000000000L) * 10 && params.latestOrder % 10000 >= 0.001 * 150) || (params.latestOrder> (1559318400000L -1000000000000L) * 10 && params.latestOrder < (1577808000000L -1000000000000L) * 10 && params.latestOrder % 10000 >= 0.001 * 390) || (params.latestOrder> (1551369600000L -1000000000000L) * 10 && params.latestOrder < (latestTime4 -1000000000000L) * 10 && params.latestOrder % 10000 >= 0.001 * 20 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 != 2 && (params.latestOrder%100000 - params.latestOrder%10000)/10000 != 8); return flag"
               }
             }
           }

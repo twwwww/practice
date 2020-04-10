@@ -17,7 +17,7 @@
                        {
                          "script": {
                            "script": {
-                             "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -120);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
+                             "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -72);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
                              "lang": "painless"
                            },
                            "boost": 1
@@ -40,7 +40,7 @@
                                             {
                                               "script": {
                                                 "script": {
-                                                  "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -28 * 24);long latestTime =  c.getTime().getTime();doc['orderList.netPayTime'].value > 1575129600000L && doc['orderList.netPayTime'].value < latestTime",
+                                                  "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -21 * 24);long latestTime =  c.getTime().getTime();doc['orderList.netPayTime'].value > 1577808000000L && doc['orderList.netPayTime'].value < latestTime",
                                                   "lang": "painless"
                                                 },
                                                 "boost": 1
@@ -52,7 +52,8 @@
                                  {
                                      "range": {
                                          "orderList.netPayMoney": {
-                                             "from":398
+                                             "gte":100,
+                                             "lt":390
                                          }
                                      }
                                    },
@@ -80,173 +81,12 @@
                                ]
                              }
                            }
-                         }
-                       }
-                     ]
-                   }
-            },
-            {
-                "bool":{
-                     "filter": [
-                                 {
-                                   "terms": {
-                                     "categoryId": [
-                                       ##CategoryIds##
-                                     ]
-                                   }
-                                 },
-                       {
-                         "script": {
-                           "script": {
-                             "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -72);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
-                             "lang": "painless"
-                           },
-                           "boost": 1
-                         }
-                       },
-                       {
-                         "nested": {
-                           "path": "orderList",
-                           "query": {
-                             "bool": {
-                               "must": [
-                                 {
-                                   "term": {
-                                     "orderList.orderType": 0
-                                   }
-                                 },
-                                  {
-                                       "script": {
-                                         "script": {
-                                           "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -28 * 24);long latestTime =  c.getTime().getTime();doc['orderList.netPayTime'].value > 1551369600000L && doc['orderList.netPayTime'].value < latestTime",
-                                           "lang": "painless"
-                                         },
-                                         "boost": 1
-                                       }
-                                     },
-                                 {
-                                     "range": {
-                                         "orderList.netPayMoney": {
-                                             "from":100
-                                         }
-                                     }
-                                   },
-                                 {
-                                   "term": {
-                                     "orderList.parentCategoryId": 16
-                                   }
-                                 },
-                                 {
-                                   "nested": {
-                                     "path": "orderList.goodsList",
-                                     "query": {
-                                       "bool": {
-                                         "must": [
-                                           {
-                                             "term": {
-                                               "orderList.goodsList.goodsAttribute": 0
-                                             }
-                                           }
-                                         ]
-                                       }
-                                     }
-                                   }
-                                 }
-                               ]
-                             }
-                           }
-                         }
-                       }
-                     ],
-                     "must_not": [
-                       {
-                         "bool": {
-                           "should": [
-                              {
-                                "terms":{
-                                    "lastOrderUserCateType":[2,8]
-                                }
-                              },
-                             {
-                               "nested": {
-                                 "path": "orderList",
-                                 "query": {
-                                   "bool": {
-                                     "should": [
-                                       {
-                                         "bool": {
-                                           "must": [
-                                             {
-                                               "term": {
-                                                 "orderList.orderType": 0
-                                               }
-                                             },
-                                             {
-                                               "term": {
-                                                 "orderList.parentCategoryId": 16
-                                               }
-                                             },
-                                             {
-                                               "nested": {
-                                                 "path": "orderList.goodsList",
-                                                 "query": {
-                                                   "bool": {
-                                                     "must": [
-                                                       {
-                                                         "term": {
-                                                           "orderList.goodsList.goodsAttribute": 0
-                                                         }
-                                                       },
-                                                       {
-                                                         "bool": {
-                                                           "should": [
-                                                             {
-                                                               "wildcard": {
-                                                                 "orderList.goodsList.goodsName": "*测试商品*"
-                                                               }
-                                                             },
-                                                             {
-                                                               "wildcard": {
-                                                                 "orderList.goodsList.goodsName": "*天成*"
-                                                               }
-                                                             },
-                                                             {
-                                                               "wildcard": {
-                                                                 "orderList.goodsList.goodsName": "*皇家*"
-                                                               }
-                                                             },
-                                                             {
-                                                               "wildcard": {
-                                                                 "orderList.goodsList.goodsName": "*铂金*"
-                                                               }
-                                                             },
-                                                             {
-                                                               "wildcard": {
-                                                                 "orderList.goodsList.goodsName": "*白金*"
-                                                               }
-                                                             }
-                                                           ]
-                                                         }
-                                                       }
-                                                     ]
-                                                   }
-                                                 }
-                                               }
-                                             }
-                                           ]
-                                         }
-                                       }
-                                     ]
-                                   }
-                                 }
-                               }
-                             }
-                           ]
                          }
                        }
                      ]
                    }
             }
+
         ]
     }
   },
