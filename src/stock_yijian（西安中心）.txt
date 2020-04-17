@@ -4,7 +4,13 @@
   "query": {
     "bool": {
       "filter": [
-
+      {
+        "terms": {
+          "categoryId": [
+            ##CategoryIds##
+          ]
+        }
+      },
         {
           "script": {
             "script": {
@@ -196,7 +202,7 @@
             "latest_order": {
               "max": {
                 "script": {
-                  "inline": "if (doc['orderList.parentCategoryId'].value == 9 && doc['orderList.netPayMoney' ].value > 1 && (doc['orderList.orderType'].value == 0 || doc['orderList.orderType'].value == 1) && doc['orderList.orderUserCateType'].value == 8) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
+                  "inline": "if (doc['orderList.parentCategoryId'].value == 9 && doc['orderList.netPayMoney' ].value > 1 && (doc['orderList.orderType'].value == 0 || doc['orderList.orderType'].value == 1)) { return doc['orderList.netPayTime'].value - doc['orderList.netPayTime'].value%10000 + doc['orderList.netPayMoney'].value * 0.001} else { return 0}"
                 }
               }
             }
