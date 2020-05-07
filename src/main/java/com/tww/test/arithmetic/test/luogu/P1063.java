@@ -33,8 +33,6 @@ public class P1063 {
      * 输出格式
      * 一个正整数E(E≤2.1 * (10)^9)，为一个最优聚合顺序所释放的总能量。
      *
-     * a1:
-     * 先去除小的值最终能获得更大的值
      *
      * a2:
      * dp[i][j] :i,j区间的能量
@@ -96,80 +94,6 @@ public class P1063 {
         System.out.println(max);
 
     }
-
-    // todo fail
-    private static void test1() {
-        Scanner cin = new Scanner(System.in);
-        int n = cin.nextInt();
-
-        List<Integer> arrN = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            arrN.set(i,cin.nextInt());
-        }
-
-        HashMap<Integer, List<Index>> hashMap = new HashMap<>();
-
-        for (int i = 0; i < n; i++) {
-            Integer preSufValue;
-            if (i == 0) {
-                preSufValue = arrN.get(n - 1) * arrN.get(1);
-            } else if (i == n - 1) {
-                preSufValue = arrN.get(n - 2) * arrN.get(0);
-            } else {
-                preSufValue = arrN.get(i - 1) * arrN.get(i + 1);
-            }
-            Index index = new Index();
-            index.index = i;
-            index.preSufValue = preSufValue;
-            index.value = arrN.get(i);
-            List<Index> orDefault = hashMap.getOrDefault(i, new ArrayList<>());
-            orDefault.add(index);
-            hashMap.put(i,orDefault);
-        }
-
-        AtomicReference<Long> result = new AtomicReference<>(0L);
-
-        hashMap.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey)).forEach(entry -> {
-            List<Index> indexList = entry.getValue();
-            indexList.stream().sorted(Comparator.comparing(Index::getPreSufValue).reversed()).forEach(index -> {
-                result.updateAndGet(v -> v + index.preSufValue * index.value );
-
-            });
-        });
-
-
-    }
-
-    private static class Index {
-        Integer index;
-        Integer preSufValue;
-        Integer value;
-
-        public Integer getValue() {
-            return value;
-        }
-
-        public void setValue(Integer value) {
-            this.value = value;
-        }
-
-        public Integer getIndex() {
-            return index;
-        }
-
-        public void setIndex(Integer index) {
-            this.index = index;
-        }
-
-        public Integer getPreSufValue() {
-            return preSufValue;
-        }
-
-        public void setPreSufValue(Integer preSufValue) {
-            this.preSufValue = preSufValue;
-        }
-    }
-
 
 
     /**
