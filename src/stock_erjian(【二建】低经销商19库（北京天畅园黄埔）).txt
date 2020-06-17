@@ -14,7 +14,7 @@
         {
           "script": {
             "script": {
-              "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -72);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
+              "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -48);long latestTime =  c.getTime().getTime();doc['lastCallTime'].value <  latestTime",
               "lang": "painless"
             },
             "boost": 1
@@ -181,7 +181,7 @@
                 "lastCallTime":"lastCallTime"
               },
               "script": {
-                "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -96);long latestTime =  c.getTime().getTime();Calendar c1 = Calendar.getInstance();c1.setTime(new Date());c1.add(11, -21 * 24);long latestTime1 =  c1.getTime().getTime();boolean flag = params.latestOrder> (1577808000000L -1000000000000L) * 10 && params.latestOrder < (latestTime1 -1000000000000L) * 10 && params.latestOrder % 10000 >= 0.001 * 15 && params.latestOrder % 10000 < 0.001 * 100;if(!flag && params.lastCallTime < latestTime){flag = (((params.latestOrder> (1559318400000L -1000000000000L) * 10 && params.latestOrder < (1577808000000L -1000000000000L) * 10)) && params.latestOrder % 10000 >= 0.001 * 15 && params.latestOrder % 10000 < 0.001 * 390) || (((params.latestOrder> (1546272000000L -1000000000000L) * 10 && params.latestOrder < (1559318400000L -1000000000000L) * 10)) && params.latestOrder % 10000 >= 0.001 * 300 && params.latestOrder % 10000 <= 0.001 * 900)} return flag"
+                "inline": "Calendar c = Calendar.getInstance();c.setTime(new Date());c.add(11, -96);long latestTime =  c.getTime().getTime();Calendar c1 = Calendar.getInstance();c1.setTime(new Date());c1.add(11, -21 * 24);long latestTime1 =  c1.getTime().getTime();boolean flag = params.latestOrder> (1577808000000L -1000000000000L) * 10 && params.latestOrder < (latestTime1 -1000000000000L) * 10 && params.latestOrder % 10000 >= 0.001 * 15 && params.latestOrder % 10000 < 0.001 * 100;if(!flag){flag = (((params.latestOrder> (1559318400000L -1000000000000L) * 10 && params.latestOrder < (1577808000000L -1000000000000L) * 10)) && params.latestOrder % 10000 >= 0.001 * 15 && params.latestOrder % 10000 < 0.001 * 390) || (((params.latestOrder> (1546272000000L -1000000000000L) * 10 && params.latestOrder < (1559318400000L -1000000000000L) * 10)) && params.latestOrder % 10000 >= 0.001 * 300 && params.latestOrder % 10000 <= 0.001 * 900)} return flag"
               }
             }
           }
