@@ -1,5 +1,12 @@
 package com.tww.test.arithmetic.tail_recursion;
 
+import com.google.common.collect.Lists;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -40,10 +47,16 @@ public interface TailRecursion<T> {
      * @return 及早求值,获得最终递归结果
      */
     default T invoke() {
+
+
+
+        // todo 第二种iterator没有报错
+        List<TailRecursion<T>> collect =
+                Stream.iterate(this, a -> !a.isFinished(), TailRecursion::apply).collect(Collectors.toList());
         return Stream.iterate(this, TailRecursion::apply)
                 .filter(TailRecursion::isFinished)
-                .findFirst()
-                .get()
-                .getResult();
+                .findAny()
+                .map(TailRecursion::getResult)
+                .get();
     }
 }
