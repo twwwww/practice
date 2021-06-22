@@ -9,7 +9,7 @@ public class ThisDemo {
 
     public void someMethod(String param) {
 
-        if (data != null && data.size() > 0 && data.contains(param)) {
+        if (this.data != null && data.size() > 0 && data.contains(param)) {
             System.out.println(data.indexOf(param));
         }
 

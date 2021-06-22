@@ -16,11 +16,11 @@ public class Test {
 
 
     public void test1() {
-        int i = 10;
+        int i = 1;
         Integer n = i;
 
         Integer j = Integer.valueOf(20);
-        int m = j.intValue();
+        int m = j;
     }
 
     public void test2() {
