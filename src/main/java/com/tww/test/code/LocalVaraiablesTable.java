@@ -4,6 +4,8 @@ public class LocalVaraiablesTable {
 
     public static int ss = 1;
     public static String str = "987";
+    public final String aa = "67";
+    public static final String bb = "086";
 
     private void write(int age) {
         String name = "123";
@@ -56,6 +58,8 @@ public class LocalVaraiablesTable {
         i8 = ++i8;
         // 第4类问题：
         int i9 = 10;
-        int i10 = i9++ + ++i9;
+        int i10 =  ++i9 + i9++;
     }
+
+
 }
