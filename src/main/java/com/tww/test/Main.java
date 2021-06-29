@@ -31,7 +31,7 @@ public class Main {
         }
 
         if (removeIndex.size() < k) {
-            for (int i = list.size() - 1; i >= list.size() - 1 - k + removeIndex.size() + 1; i++) {
+            for (int i = list.size() - 1; i >= list.size() - 1 - k + removeIndex.size() + 1; i--) {
                 removeIndex.add(i);
             }
         }
